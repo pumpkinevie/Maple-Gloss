@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maple Gloss | Digital Diary</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Inter:wght@300;400&display=swap" rel="stylesheet">
-<style>
+    <style>
         :root {
             --bg-color: #1A1A2E;
             --card-bg: #2D1B36;
@@ -48,18 +48,19 @@
         }
         
         .container {
-            max-width: 800px;
+            max-width: 850px;
             margin: 40px auto;
             padding: 20px;
         }
         
         .post-card {
             background: var(--card-bg);
-            padding: 30px;
+            padding: 40px;
             margin-bottom: 40px;
-            border-radius: 15px;
+            border-radius: 25px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            border-left: 5px solid var(--accent-color);
+            border-left: 6px solid var(--accent-color);
+            position: relative;
         }
         
         .post-date {
@@ -67,19 +68,101 @@
             text-transform: uppercase;
             color: var(--accent-color);
             font-weight: bold;
+            display: block;
+            margin-bottom: 15px;
         }
         
-        .post-card h2 {
+        h2 {
             font-family: 'Playfair Display', serif;
-            margin: 10px 0;
             color: var(--title-color);
+            text-align: center;
+            font-style: italic;
+            margin-bottom: 30px;
         }
-        
+
+        /* Stili per le immagini sparse */
+        .img-circle {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid var(--accent-color);
+            margin: 0 auto 25px auto;
+            display: block;
+        }
+
+        .img-float-right {
+            width: 180px;
+            border-radius: 25px;
+            float: right;
+            margin: 10px 0 15px 20px;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .img-float-left {
+            width: 160px;
+            border-radius: 25px;
+            float: left;
+            margin: 10px 20px 15px 0;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .img-center-large {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 30px;
+            display: block;
+            margin: 30px auto;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .mood-box {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 25px;
+            margin-top: 30px;
+            clear: both;
+        }
+
+        .mood-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 20px;
+            object-fit: cover;
+        }
+
         footer {
             text-align: center;
-            padding: 50px;
+            padding: 60px;
             font-size: 0.8rem;
             color: #888;
+        }
+
+        .cta-button {
+            text-align: center;
+            margin-top: 40px;
+            border-top: 1px dashed var(--accent-color);
+            padding-top: 30px;
+            clear: both;
+        }
+
+        .btn {
+            color: var(--title-color);
+            text-decoration: none;
+            font-style: italic;
+            border: 1px solid var(--accent-color);
+            padding: 12px 30px;
+            border-radius: 40px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: var(--accent-color);
+            color: var(--bg-color);
         }
     </style>
 </head>
@@ -90,37 +173,56 @@
         <p>Documenting my world in shades of chocolate brown and deep plum. I’m just a girl who is romanticizing autumn and the magic of the year 2000.</p>
     </header>
 
-<div class="container">
-    <article class="post-card">
-        <span class="post-date">April 8, 2026 ✨</span>
-        
-        <div style="text-align: center; margin: 20px 0;">
-            <img src="https://i.pinimg.com/736x/23/73/b4/2373b4cfec2a3a4f07a762cf3b8463e2.jpg" 
-                 style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%; border: 3px solid var(--accent-color); padding: 5px;">
-        </div>
+    <div class="container">
+        <article class="post-card">
+            <span class="post-date">April 8, 2026 ✨</span>
+            
+            <img src="https://i.pinimg.com/736x/23/73/b4/2373b4cfec2a3a4f07a762cf3b8463e2.jpg" class="img-circle">
 
-        <h2 style="text-align: center; font-style: italic;">Autumn Aesthetic & Y2K Vibes</h2>
+            <h2>Autumn Aesthetic & Y2K Vibes</h2>
 
-        <p style="margin-bottom: 20px;">
-            A soft, nostalgic corner of the internet inspired by early 2000s autumn—when everything felt a little slower, a little warmer, and effortlessly cool. 
-        </p>
+            <p>
+                A soft, nostalgic corner of the internet inspired by early 2000s autumn—when everything felt a little slower, a little warmer, and effortlessly cool.
+            </p>
 
-        <img src="https://i.pinimg.com/736x/94/1e/61/941e610bb76fe5faaa8506cc0f90ded9.jpg" 
-             style="width: 170px; border-radius: 20px; float: right; margin-left: 15px; margin-bottom: 10px; box-shadow: 5px 5px 15px rgba(0,0,0,0.05);">
+            <img src="https://i.pinimg.com/736x/94/1e/61/941e610bb76fe5faaa8506cc0f90ded9.jpg" class="img-float-right">
 
-        <p>
-            Think worn-in denim, chunky knits, thrifted layers, and that golden-hour glow that made every outfit look iconic without trying too hard. 
-        </p>
+            <p>
+                Think worn-in denim, chunky knits, thrifted layers, and that golden-hour glow that made every outfit look iconic without trying too hard.
+            </p>
 
-        <img src="https://i.pinimg.com/736x/bf/0c/fb/bf0cfb2043036314168d43e155528cfa.jpg" 
-             style="width: 150px; border-radius: 20px; float: left; margin-right: 15px; margin-top: 10px; margin-bottom: 10px;">
+            <img src="https://i.pinimg.com/736x/bf/0c/fb/bf0cfb2043036314168d43e155528cfa.jpg" class="img-float-left">
 
-        <p>
-            It’s a mix of casual street style and cozy comfort, where fashion feels personal, a bit undone, and quietly confident. 
-        </p>
+            <p>
+                It’s a mix of casual street style and cozy comfort, where fashion feels personal, a bit undone, and quietly confident.
+            </p>
 
-        <p style="clear: both; padding-top: 15px;">
-            This blog captures that mood—faded leaves, old playlists, film camera vibes, and outfits that tell stories without needing to be loud.
-        </p>
+            <p>
+                This blog captures that mood—faded leaves, old playlists, film camera vibes, and outfits that tell stories without needing to be loud.
+            </p>
 
-        <div style="text-align: center; margin:
+            <img src="https://i.pinimg.com/1200x/37/3a/e7/373ae722ff6ee3ad18971d43339f002a.jpg" class="img-center-large">
+
+            <div class="mood-box">
+                <img src="https://i.pinimg.com/736x/5e/f2/5f/5ef25fbb9b186af489312e3ed0959054.jpg" class="mood-img">
+                <p style="margin: 0; font-style: italic; color: #D7CCC8;">
+                    Current mood: Hot chocolate with extra cream and nostalgic film cameras. ☕🎞️
+                </p>
+            </div>
+
+            <div class="cta-button">
+                <a href="cinnamon-rolls.html" class="btn">
+                    Explore: Cinnamon Rolls & Kitchen Magic 🥧✨
+                </a>
+            </div>
+
+            <p style="text-align: right; font-size: 1.5rem; margin-top: 30px; clear: both;">🍁🧸🥞</p>
+        </article>
+    </div>
+
+    <footer>
+        &copy; 2026 Maple Gloss. Made with ♡
+    </footer>
+
+</body>
+</html>
