@@ -5,69 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maple Gloss | Digital Diary</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Inter:wght@300;400&display=swap" rel="stylesheet">
-    <style>
+<style>
         :root {
-            --accent-color: #512DA8; /* Deep Plum */
-            --text-color: #3E2723;   /* Deep Cocoa */
-            --bg-color: #FDFBEE;     /* Antique Ivory */
+            /* NUOVI COLORI BASE */
+            --bg-color: #1A1A2E;      /* Blu Notte Profondo (Sfondo principale) */
+            --card-bg: #2D1B36;       /* Viola Melanzana Scuro (Sfondo dei riquadri) */
+            --text-color: #FDFBEE;    /* Avorio Antico (Testo chiaro per leggere bene) */
+            --accent-color: #A1887F;  /* Marrone Taupe Rosato (Per date e accenti) */
+            --title-color: #D1C4E9;   /* Viola Lavanda Chiaro (Per il titolo principale) */
         }
+        
         body {
             font-family: 'Inter', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
+            background-color: var(--bg-color); /* Ora è Blu Notte */
+            color: var(--text-color);       /* Ora è Avorio Chiaro */
             margin: 0;
             line-height: 1.6;
         }
+        
         header {
             text-align: center;
             padding: 80px 20px;
-            background: linear-gradient(135deg, #FAF5FF 0%, #FFFDF2 100%);
-            border-bottom: 3px solid var(--accent-color);
+            /* Sfumatura Vellutata: dal Viola scuro al Marrone Cioccolato */
+            background: linear-gradient(135deg, #2D1B36 0%, #3E2723 100%);
+            border-bottom: 3px solid var(--accent-color); /* Bordo Marrone Taupe */
         }
+        
         header h1 {
             font-family: 'Playfair Display', serif;
             font-size: 3.5rem;
             margin-bottom: 10px;
             font-weight: 400;
             font-style: italic;
-            color: var(--text-color);
+            color: var(--title-color); /* Ora è Viola Lavanda Chiaro */
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* Leggera ombra per farlo risaltare */
         }
+        
         header p {
             max-width: 600px;
             margin: 0 auto;
             font-style: italic;
-            color: #6d4c41;
+            color: #D7CCC8; /* Grigio Marrone Chiaro */
             font-size: 1.1rem;
         }
+        
         .container {
             max-width: 800px;
             margin: 40px auto;
             padding: 20px;
         }
+        
         .post-card {
-            background: white;
+            background: var(--card-bg); /* Ora è Viola Melanzana Scuro */
             padding: 30px;
             margin-bottom: 40px;
             border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            border-left: 5px solid var(--accent-color);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2); /* Ombra più scura */
+            border-left: 5px solid var(--accent-color); /* Bordo Marrone Taupe */
         }
+        
         .post-date {
             font-size: 0.8rem;
             text-transform: uppercase;
-            color: var(--accent-color);
+            color: var(--accent-color); /* Marrone Taupe Rosato */
             font-weight: bold;
         }
+        
         .post-card h2 {
             font-family: 'Playfair Display', serif;
             margin: 10px 0;
-            color: var(--text-color);
+            color: var(--title-color); /* Viola Lavanda Chiaro */
         }
+        
         footer {
             text-align: center;
             padding: 50px;
             font-size: 0.8rem;
-            color: #aaa;
+            color: #888; /* Grigio scuro */
         }
     </style>
 </head>
