@@ -1,24 +1,22 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cinnamon Rolls: Dolcezza Autunnale e Magia</title>
+    <title>Cinnamon Rolls | Kitchen Magic</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Lora:ital,wght@0,400;0,700;1,400&family=Dancing+Script&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* Palette Colori Autunnali Profondi */
-            --bg-color: #1A1A2E;        /* Blu Notte Profondo (per lo sfondo principale) */
-            --card-bg: #2D1B36;         /* Viola Melanzana Scuro (per il riquadro) */
-            --text-color: #FDFBEE;      /* Avorio Antico (testo chiaro leggibile) */
-            --accent-color: #A1887F;    /* Marrone Taupe Rosato (per dettagli e date) */
-            --title-color: #D1C4E9;     /* Viola Lavanda Chiaro (per titoli principali) */
-            --highlight-color: #C19A6B; /* Oro/Senape Opaco (per evidenziare) */
-            --sub-title-color: #AF9B8F; /* Marrone Grigio Rosato */
+            --bg-color: #1A1A2E;
+            --card-bg: #2D1B36;
+            --text-color: #FDFBEE;
+            --accent-color: #A1887F;
+            --title-color: #D1C4E9;
+            --highlight-color: #C19A6B;
         }
 
         body {
-            font-family: 'Lora', serif; /* Font base accogliente e leggibile */
+            font-family: 'Lora', serif;
             background-color: var(--bg-color);
             color: var(--text-color);
             margin: 0;
@@ -27,236 +25,107 @@
 
         header {
             text-align: center;
-            padding: 90px 20px;
-            /* Sfumatura Vellutata Autunnale */
+            padding: 80px 20px;
             background: linear-gradient(135deg, #2D1B36 0%, #3E2723 100%);
             border-bottom: 3px solid var(--accent-color);
         }
 
         header h1 {
-            font-family: 'Playfair Display', serif; /* Elegante ed editoriale */
-            font-size: 4rem;
-            margin-bottom: 15px;
-            font-weight: 400;
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
             font-style: italic;
             color: var(--title-color);
-            text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-        }
-
-        header p {
-            max-width: 650px;
-            margin: 0 auto;
-            font-style: italic;
-            color: #D7CCC8; /* Grigio Marrone Chiaro */
-            font-size: 1.2rem;
+            margin-bottom: 10px;
         }
 
         .container {
-            max-width: 900px; /* Un po' più largo per contenere bene la ricetta */
-            margin: 50px auto;
+            max-width: 800px;
+            margin: 40px auto;
             padding: 20px;
         }
 
         .post-card {
             background: var(--card-bg);
             padding: 40px;
-            margin-bottom: 50px;
             border-radius: 20px;
-            box-shadow: 0 12px 40px rgba(0,0,0,0.3);
-            border-left: 6px solid var(--accent-color);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            border-left: 5px solid var(--accent-color);
         }
 
-        .post-meta {
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            color: var(--accent-color);
-            font-weight: bold;
-            margin-bottom: 25px;
-            display: block;
-            text-align: center;
-        }
-
-        .post-card h2 {
+        h2, h3 {
             font-family: 'Playfair Display', serif;
-            margin-top: 30px;
-            margin-bottom: 20px;
             color: var(--title-color);
-            text-align: center;
-            font-size: 2.5rem;
         }
 
-        .post-card h3 {
-            font-family: 'Dancing Script', cursive; /* Tocco di magia scritta a mano */
+        h3 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2rem;
             color: var(--highlight-color);
-            font-size: 2.2rem;
-            margin-top: 40px;
-            margin-bottom: 15px;
-            border-bottom: 2px dashed #6d4c41;
-            padding-bottom: 10px;
+            margin-top: 30px;
         }
 
-        /* Stili per le Liste (Ingredienti, Istruzioni, Significati) */
-        ul, ol {
-            margin-left: 20px;
-            margin-bottom: 25px;
-        }
-
-        ul li {
-            list-style-type: '🍂 '; /* Icona autunnale per la lista puntata */
-            margin-bottom: 10px;
-        }
-
-        ol li {
-            margin-bottom: 15px;
+        .recipe-img {
+            width: 100%;
+            border-radius: 20px;
+            margin: 20px 0;
         }
 
         .note {
-            background: #3E2723; /* Marrone scuro */
-            color: #D7CCC8;
+            background: #3E2723;
             padding: 20px;
             border-radius: 15px;
             font-style: italic;
-            margin: 30px 0;
             border-left: 4px solid var(--highlight-color);
+            margin: 20px 0;
         }
 
-        /* Stili per le Immagini forniti */
-        .img-header {
-            width: 100%;
-            height: auto;
-            border-radius: 25px;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-        }
-
-        .img-baking {
-            width: 100%;
-            height: auto;
-            border-radius: 25px;
-            margin-top: 30px;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-        }
-
-        footer {
-            text-align: center;
-            padding: 60px;
-            font-size: 0.9rem;
-            color: #888;
-            border-top: 1px solid #333;
-            background-color: #111; /* Sfondo footer scuro */
-        }
-
-        /* Media Queries per la reattività sui dispositivi mobili */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2.8rem;
-            }
-            .container {
-                padding: 10px;
-            }
-            .post-card {
-                padding: 25px;
-            }
-            .post-card h2 {
-                font-size: 2rem;
-            }
-            .post-card h3 {
-                font-size: 1.8rem;
-            }
-        }
+        ul { list-style-type: '🍂 '; }
+        footer { text-align: center; padding: 40px; color: #888; font-size: 0.8rem; }
     </style>
 </head>
 <body>
 
     <header>
         <h1>Maple Gloss</h1>
-        <p>Documentando il mio mondo in sfumature di marrone cioccolato e prugna profondo. Romantizzando l'autunno e la magia degli anni 2000.</p>
+        <p>Autumn recipes & spiritual intentions.</p>
     </header>
 
     <div class="container">
         <article class="post-card">
-            <span class="post-meta">In Cucina ✨🥧✨</span>
+            <span style="color: var(--accent-color); font-weight: bold;">KITCHEN MAGIC ✨🥧</span>
+            
+            <img src="https://i.pinimg.com/736x/8b/bb/7f/8bbb7f489a8e07be4535c37091a52f79.jpg" class="recipe-img">
 
-            <img src="https://i.pinimg.com/736x/8b/bb/7f/8bbb7f489a8e07be4535c37091a52f79.jpg" alt="Estetica dei Cinnamon Rolls Autunnali" class="img-header">
+            <h2>Cinnamon Rolls: Golden Glow & Intentions</h2>
+            <p>There is nothing like the scent of cinnamon filling the house on a crisp October morning. It’s more than just baking; it’s a ritual of warmth and comfort.</p>
 
-            <h2 style="font-style: italic;">Cinnamon Rolls: Dolcezza Autunnale e la Magia dell'Intenzione</h2>
-
-            <p>
-                Non c'è niente che gridi "autunno" come l'odore della cannella che si diffonde in tutta la casa. C'è qualcosa di profondamente confortante e nostalgico nel preparare questi involtini dolci, un calore che va oltre il semplice cibo. Oggi, voglio condividere con voi la mia ricetta preferita e anche un po' della magia spirituale che si nasconde dietro a questi ingredienti.
-            </p>
-
-            <h3>🥧 La Ricetta: I Miei Cinnamon Rolls Perfetti</h3>
-
-            <p style="font-style: italic; color: var(--sub-title-color);">Ingredienti (per circa 12 rolls):</p>
+            <h3>🥧 The Recipe</h3>
             <ul>
-                <li><strong>Per l'impasto:</strong>
-                    <ul>
-                        <li>500g di farina 00</li>
-                        <li>7g di lievito di birra secco</li>
-                        <li>250ml di latte tiepido</li>
-                        <li>80g di burro fuso</li>
-                        <li>50g di zucchero</li>
-                        <li>1 uovo</li>
-                        <li>1 pizzico di sale</li>
-                    </ul>
-                </li>
-                <li><strong>Per il ripieno:</strong>
-                    <ul>
-                        <li>100g di burro morbido</li>
-                        <li>150g di zucchero di canna</li>
-                        <li>3 cucchiai abbondanti di cannella in polvere</li>
-                    </ul>
-                </li>
-                <li><strong>Per la glassa:</strong>
-                    <ul>
-                        <li>150g di zucchero a velo</li>
-                        <li>2-3 cucchiai di latte o panna liquida</li>
-                    </ul>
-                </li>
+                <li><strong>Dough:</strong> 500g flour, 7g yeast, 250ml warm milk, 80g melted butter, 50g sugar, 1 egg.</li>
+                <li><strong>Filling:</strong> 100g soft butter, 150g brown sugar, 3 tbsp cinnamon.</li>
+                <li><strong>Frosting:</strong> 150g powdered sugar, 2 tbsp milk.</li>
+            </ul>
+
+            <img src="https://i.pinimg.com/1200x/26/9f/c7/269fc77567cee5ae8f949441ac2b4a2e.jpg" class="recipe-img">
+
+            <h3>✨ Spiritual Meaning</h3>
+            <p>In witchcraft and kitchen alchemy, cinnamon is a powerful ally:</p>
+            <ul>
+                <li><strong>Protection & Success:</strong> Cinnamon raises the vibration of your home and attracts prosperity.</li>
+                <li><strong>Sweetness of Life:</strong> Brown sugar represents harmony and the comfort of the hearth.</li>
+                <li><strong>The Spiral:</strong> As you roll the dough, visualize yourself sealing in positive intentions and protection for the season ahead.</li>
             </ul>
 
             <div class="note">
-                <p><strong>Trucco dei primi anni 2000:</strong> Usate burro di alta qualità per l'impasto e abbondate con la glassa. Ricordate le scene dei film adolescenziali con questi dolci giganti? Esattamente quell'effetto.</p>
+                "As the rolls rise, so does the energy of peace in my home."
             </div>
 
-            <p style="font-style: italic; color: var(--sub-title-color);">Istruzioni:</p>
-            <ol>
-                <li><strong>Preparate l'impasto:</strong> In una ciotola capiente, mescolate la farina e il lievito. Aggiungete il latte tiepido, il burro fuso, lo zucchero e l'uovo. Lavorate fino a ottenere un impasto liscio e omogeneo. Lasciatelo lievitare in un luogo caldo, coperto da un canovaccio, per circa 1-2 ore (fino al raddoppio).</li>
-                <li><strong>Il Ripieno Magico:</strong> Una volta lievitato, stendete l'impasto in un rettangolo su una superficie infarinata. Spalmate il burro morbido su tutta la superficie e spolverizzate generosamente con il mix di zucchero di canna e cannella.</li>
-                <li><strong>Formate i Rolls:</strong> Arrotolate l'impasto partendo dal lato lungo, sigillando bene il bordo. Tagliate il rotolo in 12 fette di uguale dimensione e posizionatele in una teglia da forno imburrata. Lasciateli lievitare per altri 30 minuti.</li>
-                <li><strong>Cottura:</strong> Preriscaldate il forno a 180°C e infornate i rolls per circa 20-25 minuti, fino a quando non saranno dorati.</li>
-                <li><strong>La Glassa Finale:</strong> Mentre i rolls si raffreddano leggermente, mescolate lo zucchero a velo con il latte fino a ottenere una glassa liscia e versatela generosamente sopra i rolls ancora caldi.</li>
-            </ol>
-
-            <img src="https://i.pinimg.com/1200x/26/9f/c7/269fc77567cee5ae8f949441ac2b4a2e.jpg" alt="Cinnamon Rolls in cottura o preparazione" class="img-baking">
-
-            <h3>✨ Significato Spirituale e Magia della Cannella</h3>
-
-            <p>
-                Oltre al sapore, gli ingredienti dei cinnamon rolls hanno una lunga storia nella pratica spirituale. La cucina è, a tutti gli effetti, un altare dove l'intenzione può essere infusa nel cibo che prepariamo.
-            </p>
-
-            <ul>
-                <li><strong>La Cannella (Cinnamomum Verum):</strong> Da secoli, la cannella è associata alla <strong>protezione</strong>, al <strong>successo</strong> e all'<strong>abbondanza</strong>. Il suo calore e il suo aroma potente sono creduti capaci di elevare le vibrazioni energetiche, attirare prosperità e infondere fiducia.</li>
-                <li><strong>Zucchero di Canna:</strong> Rappresenta la <strong>dolcezza della vita</strong>, il comfort e l'amore. Usarlo con intenzione aiuta a portare armonia e gioia nelle relazioni e nella casa.</li>
-                <li><strong>Il Gesto del Rotolo:</strong> L'azione di arrotolare l'impasto può essere visualizzata come un modo per <strong>proteggere</strong> e <strong>intrappolare le intenzioni positive</strong> (l'abbondanza della cannella e la dolcezza dello zucchero) all'interno, rilasciandole lentamente man mano che si mangiano.</li>
-            </ul>
-
-            <div class="note">
-                <p>Mentre mescolate la cannella e lo zucchero di canna per il ripieno, provate a concentrarvi su un'intenzione specifica per la vostra casa o per le persone che mangeranno questi dolci. Visualizzate il calore e la gioia che volete portare.</p>
-            </div>
-
-            <p>
-                Quindi, la prossima volta che infornate questi dolci, non state solo cucinando; state creando un piccolo rituale autunnale di comfort e intenzione positiva. 🕯️
-            </p>
-
-            <p style="text-align: right; font-size: 1.8rem; margin-top: 30px;">🍂🥧🔮</p>
+            <p style="text-align: right; font-size: 1.5rem;">🍂🥧🔮</p>
         </article>
     </div>
 
     <footer>
-        <p>&copy; 2026 Maple Gloss | Made with ♡ | Autumn 2000s Aesthetic</p>
+        &copy; 2026 Maple Gloss. Made with ♡
     </footer>
 
 </body>
