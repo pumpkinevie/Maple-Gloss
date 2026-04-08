@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maple Gloss | Digital Diary</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Inter:wght@300;400&display=swap" rel="stylesheet">
-    <style>
+<style>
         :root {
             --bg-color: #1A1A2E;
             --card-bg: #2D1B36;
@@ -13,6 +13,7 @@
             --accent-color: #A1887F;
             --title-color: #D1C4E9;
         }
+        
         body {
             font-family: 'Inter', sans-serif;
             background-color: var(--bg-color);
@@ -20,65 +21,106 @@
             margin: 0;
             line-height: 1.6;
         }
+        
         header {
             text-align: center;
             padding: 80px 20px;
             background: linear-gradient(135deg, #2D1B36 0%, #3E2723 100%);
             border-bottom: 3px solid var(--accent-color);
         }
+        
         header h1 {
             font-family: 'Playfair Display', serif;
             font-size: 3.5rem;
+            margin-bottom: 10px;
+            font-weight: 400;
             font-style: italic;
             color: var(--title-color);
-            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
+        
+        header p {
+            max-width: 600px;
+            margin: 0 auto;
+            font-style: italic;
+            color: #D7CCC8;
+            font-size: 1.1rem;
+        }
+        
         .container {
             max-width: 800px;
             margin: 40px auto;
             padding: 20px;
         }
+        
         .post-card {
             background: var(--card-bg);
             padding: 30px;
+            margin-bottom: 40px;
             border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
             border-left: 5px solid var(--accent-color);
         }
+        
         .post-date {
             font-size: 0.8rem;
+            text-transform: uppercase;
             color: var(--accent-color);
             font-weight: bold;
         }
-        footer { text-align: center; padding: 50px; color: #888; font-size: 0.8rem; }
+        
+        .post-card h2 {
+            font-family: 'Playfair Display', serif;
+            margin: 10px 0;
+            color: var(--title-color);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 50px;
+            font-size: 0.8rem;
+            color: #888;
+        }
     </style>
 </head>
 <body>
+
     <header>
         <h1>Maple Gloss</h1>
-        <p>Romanticizing autumn and the magic of the year 2000.</p>
+        <p>Documenting my world in shades of chocolate brown and deep plum. I’m just a girl who is romanticizing autumn and the magic of the year 2000.</p>
     </header>
 
-    <div class="container">
-        <article class="post-card">
-            <span class="post-date">APRIL 8, 2026 ✨</span>
-            
-            <h2 style="font-family: 'Playfair Display', serif; color: var(--title-color); text-align: center;">Autumn Aesthetic & Y2K Vibes</h2>
-            
-            <div style="text-align: center; margin: 20px 0;">
-                <img src="https://i.pinimg.com/736x/23/73/b4/2373b4cfec2a3a4f07a762cf3b8463e2.jpg" style="width: 120px; border-radius: 50%; border: 2px solid var(--accent-color);">
-            </div>
+<div class="container">
+    <article class="post-card">
+        <span class="post-date">April 8, 2026 ✨</span>
+        
+        <div style="text-align: center; margin: 20px 0;">
+            <img src="https://i.pinimg.com/736x/23/73/b4/2373b4cfec2a3a4f07a762cf3b8463e2.jpg" 
+                 style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%; border: 3px solid var(--accent-color); padding: 5px;">
+        </div>
 
-            <p>Welcome to my digital diary. This is a space dedicated to chunky knits, faded film photos, and the cozy nostalgia of the early 2000s.</p>
+        <h2 style="text-align: center; font-style: italic;">Autumn Aesthetic & Y2K Vibes</h2>
 
-            <div style="text-align: center; margin-top: 30px;">
-                <a href="cinnamon-rolls.html" style="color: var(--title-color); text-decoration: none; font-style: italic; border: 1px solid var(--accent-color); padding: 12px 25px; border-radius: 30px; display: inline-block;">
-                    Latest Post: Cinnamon Rolls & Magic 🥧✨
-                </a>
-            </div>
-        </article>
-    </div>
+        <p style="margin-bottom: 20px;">
+            A soft, nostalgic corner of the internet inspired by early 2000s autumn—when everything felt a little slower, a little warmer, and effortlessly cool. 
+        </p>
 
-    <footer>&copy; 2026 Maple Gloss. Made with ♡</footer>
-</body>
-</html>
+        <img src="https://i.pinimg.com/736x/94/1e/61/941e610bb76fe5faaa8506cc0f90ded9.jpg" 
+             style="width: 170px; border-radius: 20px; float: right; margin-left: 15px; margin-bottom: 10px; box-shadow: 5px 5px 15px rgba(0,0,0,0.05);">
+
+        <p>
+            Think worn-in denim, chunky knits, thrifted layers, and that golden-hour glow that made every outfit look iconic without trying too hard. 
+        </p>
+
+        <img src="https://i.pinimg.com/736x/bf/0c/fb/bf0cfb2043036314168d43e155528cfa.jpg" 
+             style="width: 150px; border-radius: 20px; float: left; margin-right: 15px; margin-top: 10px; margin-bottom: 10px;">
+
+        <p>
+            It’s a mix of casual street style and cozy comfort, where fashion feels personal, a bit undone, and quietly confident. 
+        </p>
+
+        <p style="clear: both; padding-top: 15px;">
+            This blog captures that mood—faded leaves, old playlists, film camera vibes, and outfits that tell stories without needing to be loud.
+        </p>
+
+        <div style="text-align: center; margin:
