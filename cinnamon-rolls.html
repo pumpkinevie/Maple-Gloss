@@ -18,9 +18,33 @@
         .container { max-width: 800px; margin: 40px auto; padding: 20px; }
         .recipe-card { background: var(--card-bg); padding: 40px; border-radius: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.4); }
         h1, h2, h3 { font-family: 'Playfair Display', serif; color: var(--title-color); font-style: italic; }
-        .aesthetic-img { width: 100%; border-radius: 25px; margin: 25px 0; box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
-        .ingredients-box, .method-box { background: rgba(255, 255, 255, 0.03); padding: 25px; border-radius: 20px; margin: 20px 0; border-left: 3px solid var(--highlight-color); }
-        .quote-box { background: rgba(161, 136, 127, 0.1); padding: 20px; border-radius: 15px; font-style: italic; text-align: center; margin-top: 30px; border: 1px solid var(--accent-color); }
+        
+        .aesthetic-img { 
+            width: 100%; 
+            border-radius: 25px; 
+            margin: 25px 0; 
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            display: block;
+        }
+
+        .img-small-float {
+            width: 220px;
+            border-radius: 20px;
+            float: left;
+            margin: 10px 25px 20px 0;
+            border: 1px solid var(--accent-color);
+        }
+
+        .ingredients-box, .method-box { 
+            background: rgba(255, 255, 255, 0.03); 
+            padding: 25px; 
+            border-radius: 20px; 
+            margin: 20px 0; 
+            border-left: 3px solid var(--highlight-color); 
+            clear: both;
+        }
+
+        .quote-box { background: rgba(161, 136, 127, 0.1); padding: 20px; border-radius: 15px; font-style: italic; text-align: center; margin-top: 30px; border: 1px solid var(--accent-color); clear: both; }
         .back-link { display: block; text-align: center; margin-top: 30px; color: var(--title-color); text-decoration: none; font-style: italic; }
         ul { list-style: none; padding-left: 10px; }
         li::before { content: "✨ "; margin-right: 10px; }
@@ -30,35 +54,33 @@
     <div class="container">
         <article class="recipe-card">
             <h1>Cinnamon Rolls: Golden Glow & Intentions</h1>
+            
+            <img src="https://i.pinimg.com/736x/8a/a5/6a/8aa56a8775f0967389e70196860d5c07.jpg" class="aesthetic-img">
+
             <p>There is nothing like the scent of cinnamon filling the house on a crisp October morning. It’s more than just baking; it’s a ritual of warmth and comfort.</p>
 
             <div class="ingredients-box">
-                <h3>🍪 The Recipe</h3>
+                <h3>🍞 The Recipe</h3>
                 <p><strong>Dough:</strong> 500g flour, 7g yeast, 250ml warm milk, 80g melted butter, 50g sugar, 1 egg.</p>
                 <p><strong>Filling:</strong> 100g soft butter, 150g brown sugar, 3 tbsp cinnamon.</p>
                 <p><strong>Frosting:</strong> 150g powdered sugar, 2 tbsp milk.</p>
             </div>
 
-            <img src="https://i.pinimg.com/1200x/6b/39/20/6b392045fee1bdf3d17a42c0624b67f4.jpg" class="aesthetic-img">
+            <img src="https://i.pinimg.com/736x/21/2a/39/212a392095f7c320f788647a514d0263.jpg" class="img-small-float">
 
             <div class="method-box">
                 <h3>🪄 The Ritual (Method)</h3>
                 <ul>
-                    <li><strong>The Awakening:</strong> Mix warm milk, yeast, and a spoonful of sugar. Let it rest until it bubbles—that's the life waking up.</li>
-                    <li><strong>Gathering:</strong> Combine the yeast mix with flour, melted butter, sugar, and the egg. Knead until the dough feels like a soft pillow. Let it rise for 1 hour.</li>
-                    <li><strong>The Spiral:</strong> Roll the dough into a rectangle. Spread the soft butter and cover it with the cinnamon-sugar mix. Roll it tightly into a log.</li>
-                    <li><strong>Transformation:</strong> Cut into 12 rolls. Let them rise for 30 more minutes. Bake at 180°C for 20-25 minutes until golden.</li>
-                    <li><strong>The Final Touch:</strong> While warm, drizzle with the frosting. Watch it melt into the spirals.</li>
+                    <li><strong>The Awakening:</strong> Mix warm milk, yeast, and sugar. Let it bubble.</li>
+                    <li><strong>Gathering:</strong> Knead everything into a soft dough. Let it rise for 1 hour until doubled.</li>
+                    <li><strong>The Spiral:</strong> Roll out, spread butter and cinnamon-sugar, then roll tightly.</li>
+                    <li><strong>Transformation:</strong> Cut into rolls, rise for 30 mins, then bake at 180°C for 25 mins.</li>
+                    <li><strong>The Final Touch:</strong> Drizzle with frosting while they are still warm and glowing.</li>
                 </ul>
             </div>
 
             <h3>✨ Spiritual Meaning</h3>
-            <p>In witchcraft and kitchen alchemy, cinnamon is a powerful ally:</p>
-            <ul>
-                <li><strong>Protection & Success:</strong> Cinnamon raises the vibration of your home.</li>
-                <li><strong>Sweetness of Life:</strong> Brown sugar represents harmony and the comfort of the hearth.</li>
-                <li><strong>The Spiral:</strong> As you roll the dough, visualize sealing in positive intentions.</li>
-            </ul>
+            <p>In witchcraft and kitchen alchemy, cinnamon is a powerful ally for protection and prosperity. As you roll the dough, visualize sealing in positive intentions for the season ahead.</p>
 
             <div class="quote-box">
                 "As the rolls rise, so does the energy of peace in my home."
