@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cinnamon Rolls | Kitchen Magic</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Lora:ital,wght@0,400;0,700;1,400&family=Dancing+Script&display=swap" rel="stylesheet">
+    <title>Cinnamon Rolls: Golden Glow & Intentions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg-color: #1A1A2E;
@@ -14,124 +14,58 @@
             --title-color: #D1C4E9;
             --highlight-color: #C19A6B;
         }
-
-        body {
-            font-family: 'Lora', serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            margin: 0;
-            line-height: 1.8;
-        }
-
-        header {
-            text-align: center;
-            padding: 80px 20px;
-            background: linear-gradient(135deg, #2D1B36 0%, #3E2723 100%);
-            border-bottom: 3px solid var(--accent-color);
-        }
-
-        header h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3.5rem;
-            font-style: italic;
-            color: var(--title-color);
-            margin-bottom: 10px;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 20px;
-        }
-
-        .post-card {
-            background: var(--card-bg);
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-            border-left: 5px solid var(--accent-color);
-        }
-
-        h2, h3 {
-            font-family: 'Playfair Display', serif;
-            color: var(--title-color);
-        }
-
-        h3 {
-            font-family: 'Dancing Script', cursive;
-            font-size: 2rem;
-            color: var(--highlight-color);
-            margin-top: 30px;
-        }
-
-        .recipe-img {
-            width: 100%;
-            border-radius: 20px;
-            margin: 20px 0;
-        }
-
-        .note {
-            background: #3E2723;
-            padding: 20px;
-            border-radius: 15px;
-            font-style: italic;
-            border-left: 4px solid var(--highlight-color);
-            margin: 20px 0;
-        }
-
-        ul { list-style-type: '🍂 '; }
-        footer { text-align: center; padding: 40px; color: #888; font-size: 0.8rem; }
+        body { font-family: 'Lora', serif; background-color: var(--bg-color); color: var(--text-color); line-height: 1.8; margin: 0; }
+        .container { max-width: 800px; margin: 40px auto; padding: 20px; }
+        .recipe-card { background: var(--card-bg); padding: 40px; border-radius: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.4); }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; color: var(--title-color); font-style: italic; }
+        .aesthetic-img { width: 100%; border-radius: 25px; margin: 25px 0; box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
+        .ingredients-box, .method-box { background: rgba(255, 255, 255, 0.03); padding: 25px; border-radius: 20px; margin: 20px 0; border-left: 3px solid var(--highlight-color); }
+        .quote-box { background: rgba(161, 136, 127, 0.1); padding: 20px; border-radius: 15px; font-style: italic; text-align: center; margin-top: 30px; border: 1px solid var(--accent-color); }
+        .back-link { display: block; text-align: center; margin-top: 30px; color: var(--title-color); text-decoration: none; font-style: italic; }
+        ul { list-style: none; padding-left: 10px; }
+        li::before { content: "✨ "; margin-right: 10px; }
     </style>
 </head>
 <body>
-
-    <header>
-        <h1>Maple Gloss</h1>
-        <p>Autumn recipes & spiritual intentions.</p>
-    </header>
-
     <div class="container">
-        <article class="post-card">
-            <span style="color: var(--accent-color); font-weight: bold;">KITCHEN MAGIC ✨🥧</span>
-            
-            <img src="https://i.pinimg.com/736x/8b/bb/7f/8bbb7f489a8e07be4535c37091a52f79.jpg" class="recipe-img">
-
-            <h2>Cinnamon Rolls: Golden Glow & Intentions</h2>
+        <article class="recipe-card">
+            <h1>Cinnamon Rolls: Golden Glow & Intentions</h1>
             <p>There is nothing like the scent of cinnamon filling the house on a crisp October morning. It’s more than just baking; it’s a ritual of warmth and comfort.</p>
 
-            <h3>🥧 The Recipe</h3>
-            <ul>
-                <li><strong>Dough:</strong> 500g flour, 7g yeast, 250ml warm milk, 80g melted butter, 50g sugar, 1 egg.</li>
-                <li><strong>Filling:</strong> 100g soft butter, 150g brown sugar, 3 tbsp cinnamon.</li>
-                <li><strong>Frosting:</strong> 150g powdered sugar, 2 tbsp milk.</li>
-            </ul>
+            <div class="ingredients-box">
+                <h3>🍞 The Recipe</h3>
+                <p><strong>Dough:</strong> 500g flour, 7g yeast, 250ml warm milk, 80g melted butter, 50g sugar, 1 egg.</p>
+                <p><strong>Filling:</strong> 100g soft butter, 150g brown sugar, 3 tbsp cinnamon.</p>
+                <p><strong>Frosting:</strong> 150g powdered sugar, 2 tbsp milk.</p>
+            </div>
 
-            <img src="https://i.pinimg.com/1200x/26/9f/c7/269fc77567cee5ae8f949441ac2b4a2e.jpg" class="recipe-img">
+            <img src="https://i.pinimg.com/736x/8a/a5/6a/8aa56a8775f0967389e70196860d5c07.jpg" class="aesthetic-img">
+
+            <div class="method-box">
+                <h3>🪄 The Ritual (Method)</h3>
+                <ul>
+                    <li><strong>The Awakening:</strong> Mix warm milk, yeast, and a spoonful of sugar. Let it rest until it bubbles—that's the life waking up.</li>
+                    <li><strong>Gathering:</strong> Combine the yeast mix with flour, melted butter, sugar, and the egg. Knead until the dough feels like a soft pillow. Let it rise in a warm corner for 1 hour.</li>
+                    <li><strong>The Spiral:</strong> Roll the dough into a large rectangle. Spread the soft butter and cover it with the cinnamon-sugar mix. Roll it tightly into a log.</li>
+                    <li><strong>Transformation:</strong> Cut into 12 rolls and place them in a tray. Let them rise for 30 more minutes. Bake at 180°C for 20-25 minutes until golden.</li>
+                    <li><strong>The Final Touch:</strong> While warm, drizzle with the frosting. Watch it melt into the spirals.</li>
+                </ul>
+            </div>
 
             <h3>✨ Spiritual Meaning</h3>
             <p>In witchcraft and kitchen alchemy, cinnamon is a powerful ally:</p>
             <ul>
-                <li><strong>Protection & Success:</strong> Cinnamon raises the vibration of your home and attracts prosperity.</li>
+                <li><strong>Protection & Success:</strong> Cinnamon raises the vibration of your home.</li>
                 <li><strong>Sweetness of Life:</strong> Brown sugar represents harmony and the comfort of the hearth.</li>
-                <li><strong>The Spiral:</strong> As you roll the dough, visualize yourself sealing in positive intentions and protection for the season ahead.</li>
+                <li><strong>The Spiral:</strong> As you roll the dough, visualize sealing in positive intentions.</li>
             </ul>
 
-            <div class="note">
+            <div class="quote-box">
                 "As the rolls rise, so does the energy of peace in my home."
             </div>
 
-            <p style="text-align: right; font-size: 1.5rem;">🍂🥧🔮</p>
-            <div style="text-align: center; margin-top: 40px; border-top: 1px dashed var(--accent-color); padding-top: 20px;">
-    <a href="index.html" style="color: var(--title-color); text-decoration: none; font-style: italic; font-size: 0.9rem;">
-        « Back to the journal
-    </a>
-</div>
+            <a href="index.html" class="back-link">« Back to the journal</a>
         </article>
     </div>
-
-    <footer>
-        &copy; 2026 Maple Gloss. Made with ♡
-    </footer>
-
 </body>
 </html>
