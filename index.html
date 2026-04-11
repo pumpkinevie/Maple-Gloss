@@ -42,7 +42,7 @@
             box-shadow: 0 20px 60px rgba(0,0,0,0.6);
         }
 
-        /* FOTO 1 - PIEDI DAL FINESTRINO (DOMINANTE) */
+        /* FOTO 1 - PIEDI DAL FINESTRINO (DOMINANTE) - Resta uguale */
         .top-feature-img {
             width: 100%;
             aspect-ratio: 1 / 1;
@@ -56,28 +56,42 @@
         .post-title { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.5rem; margin: 15px 0 25px; text-align: center; }
         .journal-text { font-size: 0.95rem; line-height: 1.8; text-align: left; margin-bottom: 25px; }
 
-        .collage-row { display: flex; align-items: center; justify-content: space-between; margin: 30px 0; gap: 15px; }
+        /* Collage Row - Modificato per foto più grandi */
+        .collage-row { display: flex; align-items: center; justify-content: space-between; margin: 40px 0; gap: 20px; }
         
-        /* FOTO 2 (Arredamento) e FOTO 3 (Waffle) */
-        .collage-item { width: 90px; height: 90px; object-fit: cover; border: 1px solid var(--accent-color); border-radius: 12px; }
+        /* FOTO 2 (Arredamento) e FOTO 3 (Waffle) - INGRANDITE */
+        .collage-item { 
+            width: 150px; /* Quasi raddoppiate */
+            height: 150px; 
+            object-fit: cover; 
+            border: 2px solid var(--accent-color); 
+            border-radius: 15px; 
+        }
         .collage-item.round { border-radius: 50%; }
 
-        /* FOTO 4 - Gatto/Mele */
+        /* FOTO 4 - Gatto/Mele - Resta uguale */
         .cat-apples-img { width: 100%; border-radius: 15px; margin: 25px 0; border: 1px solid rgba(211, 84, 0, 0.1); }
 
-        /* FOTO 5 - Cioccolata nel mood footer */
+        /* FOTO 5 - Cioccolata nel mood footer - INGRANDITA */
         .mood-footer {
             background: rgba(255,255,255,0.03);
-            padding: 15px;
-            border-radius: 12px;
+            padding: 20px;
+            border-radius: 15px;
             display: flex;
             align-items: center;
-            gap: 15px;
-            font-size: 0.85rem;
-            margin-top: 30px;
+            gap: 20px;
+            font-size: 0.9rem;
+            margin-top: 40px;
         }
-        .mood-footer img { width: 45px; height: 45px; border-radius: 8px; object-fit: cover; }
+        .mood-footer img { 
+            width: 80px; /* Ingrandita */
+            height: 80px; 
+            border-radius: 10px; 
+            object-fit: cover; 
+            border: 1px solid var(--accent-color);
+        }
 
+        /* Topics Section (Le copertine sotto) - Restano uguali */
         .topics-section {
             width: 90%;
             max-width: 900px;
@@ -124,9 +138,11 @@
 
         <div class="collage-row">
             <img src="https://i.pinimg.com/736x/bf/0c/fb/bf0cfb2043036314168d43e155528cfa.jpg" class="collage-item" alt="Waffles">
-            <p style="font-size: 0.75rem; font-style: italic; flex: 1; text-align: center; opacity: 0.8;">
+            
+            <p style="font-size: 0.75rem; font-style: italic; flex: 1; text-align: center; opacity: 0.8; padding: 0 10px;">
                 "It’s a mix of casual street style and cozy comfort..."
             </p>
+            
             <img src="https://i.pinimg.com/736x/94/1e/61/941e610bb76fe5faaa8506cc0f90ded9.jpg" class="collage-item round" alt="Aesthetic">
         </div>
 
