@@ -23,14 +23,13 @@
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
-            padding-bottom: 60px;
+            padding-bottom: 80px;
         }
 
         header { text-align: center; padding: 60px 20px 0; }
         header h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; font-style: italic; margin: 0; }
         header p { font-size: 0.8rem; opacity: 0.8; max-width: 450px; margin: 10px auto; line-height: 1.5; }
 
-        /* Main Journal Card */
         .journal-card {
             background-color: var(--card-bg);
             width: 90%;
@@ -43,7 +42,7 @@
             box-shadow: 0 20px 60px rgba(0,0,0,0.6);
         }
 
-        /* Foto piedi dal finestrino - In alto, quadrata e grande */
+        /* FOTO 1 - PIEDI DAL FINESTRINO (DOMINANTE) */
         .top-feature-img {
             width: 100%;
             aspect-ratio: 1 / 1;
@@ -54,24 +53,19 @@
         }
 
         .date-stamp { font-size: 0.65rem; color: var(--accent-color); text-transform: uppercase; letter-spacing: 1px; }
-
-        .post-title {
-            font-family: 'Playfair Display', serif;
-            font-style: italic;
-            font-size: 1.5rem;
-            margin: 15px 0 25px;
-            text-align: center;
-        }
-
+        .post-title { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.5rem; margin: 15px 0 25px; text-align: center; }
         .journal-text { font-size: 0.95rem; line-height: 1.8; text-align: left; margin-bottom: 25px; }
 
-        /* Collage Section */
         .collage-row { display: flex; align-items: center; justify-content: space-between; margin: 30px 0; gap: 15px; }
+        
+        /* FOTO 2 (Arredamento) e FOTO 3 (Waffle) */
         .collage-item { width: 90px; height: 90px; object-fit: cover; border: 1px solid var(--accent-color); border-radius: 12px; }
         .collage-item.round { border-radius: 50%; }
 
-        .cat-apples-img { width: 100%; border-radius: 15px; margin: 25px 0; }
+        /* FOTO 4 - Gatto/Mele */
+        .cat-apples-img { width: 100%; border-radius: 15px; margin: 25px 0; border: 1px solid rgba(211, 84, 0, 0.1); }
 
+        /* FOTO 5 - Cioccolata nel mood footer */
         .mood-footer {
             background: rgba(255,255,255,0.03);
             padding: 15px;
@@ -84,30 +78,29 @@
         }
         .mood-footer img { width: 45px; height: 45px; border-radius: 8px; object-fit: cover; }
 
-        /* TOPICS CARDS SECTION - Sotto il diario */
         .topics-section {
             width: 90%;
-            max-width: 800px;
+            max-width: 900px;
             margin-top: 20px;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 15px;
         }
 
         .topic-card {
             background: var(--card-bg);
-            border-radius: 15px;
+            border-radius: 12px;
             overflow: hidden;
             text-decoration: none;
             color: inherit;
             border: 1px solid rgba(211, 84, 0, 0.1);
             transition: 0.3s;
+            text-align: center;
         }
 
         .topic-card:hover { transform: translateY(-5px); border-color: var(--accent-color); }
         .topic-card img { width: 100%; aspect-ratio: 1/1; object-fit: cover; }
-        .topic-card h3 { font-family: 'Playfair Display', serif; font-size: 1rem; margin: 10px; text-align: center; }
-
+        .topic-card h3 { font-family: 'Playfair Display', serif; font-size: 0.8rem; margin: 10px; }
     </style>
 </head>
 <body>
@@ -118,7 +111,7 @@
     </header>
 
     <div class="journal-card">
-        <img src="https://i.pinimg.com/736x/bf/0c/fb/bf0cfb2043036314168d43e155528cfa.jpg" class="top-feature-img" alt="Feet out the window">
+        <img src="https://i.pinimg.com/736x/23/73/b4/2373b4cfec2a3a4f07a762cf3b8463e2.jpg" class="top-feature-img" alt="Feet out window">
         
         <div class="date-stamp">April 11, 2026 ✨</div>
         <div class="post-title">Autumn Aesthetic & Y2K Vibes</div>
@@ -130,7 +123,7 @@
         </div>
 
         <div class="collage-row">
-            <img src="https://i.pinimg.com/736x/23/73/b4/2373b4cfec2a3a4f07a762cf3b8463e2.jpg" class="collage-item" alt="Cinnamon">
+            <img src="https://i.pinimg.com/736x/bf/0c/fb/bf0cfb2043036314168d43e155528cfa.jpg" class="collage-item" alt="Waffles">
             <p style="font-size: 0.75rem; font-style: italic; flex: 1; text-align: center; opacity: 0.8;">
                 "It’s a mix of casual street style and cozy comfort..."
             </p>
@@ -155,15 +148,23 @@
 
     <div class="topics-section">
         <a href="cinnamon-rolls.html" class="topic-card">
-            <img src="https://i.pinimg.com/736x/d5/68/92/d56892ce5f763e87a12fc6932fc7f9da.jpg" alt="Cooking">
-            <h3>Kitchen Alchemy</h3>
+            <img src="https://i.pinimg.com/736x/d5/68/92/d56892ce5f763e87a12fc6932fc7f9da.jpg" alt="Cinnamon">
+            <h3>Cinnamon Rolls</h3>
+        </a>
+        <a href="pumpkin-muffins.html" class="topic-card">
+            <img src="https://i.pinimg.com/1200x/fc/53/c8/fc53c8fef93f060faef1111cf82dbbb3.jpg" alt="Muffins">
+            <h3>Pumpkin Muffins</h3>
         </a>
         <a href="moon-water.html" class="topic-card">
-            <img src="https://i.pinimg.com/736x/7c/a5/bd/7ca5bd21771abeee50393455cc6f7561.jpg" alt="Witchy">
-            <h3>Witchy Corner</h3>
+            <img src="https://i.pinimg.com/736x/7c/a5/bd/7ca5bd21771abeee50393455cc6f7561.jpg" alt="Moon Water">
+            <h3>Moon Rituals</h3>
+        </a>
+        <a href="herb-magic.html" class="topic-card">
+            <img src="https://i.pinimg.com/1200x/ad/b4/d7/adb4d778e5910ca8bea16e6fa16bfae3.jpg" alt="Herbs">
+            <h3>Herb Magic</h3>
         </a>
         <a href="book-review.html" class="topic-card">
-            <img src="https://m.media-amazon.com/images/I/511oZaXJsLL._AC_UF1000,1000_QL80_.jpg" alt="Books">
+            <img src="https://m.media-amazon.com/images/I/511oZaXJsLL._AC_UF1000,1000_QL80_.jpg" alt="Book">
             <h3>Book Club</h3>
         </a>
     </div>
