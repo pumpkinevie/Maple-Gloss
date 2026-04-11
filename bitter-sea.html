@@ -3,168 +3,190 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Across the Bitter Sea | Reading Nook</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Lora:ital,wght@0,400;0,700;1,400&family=Dancing+Script&display=swap" rel="stylesheet">
+    <title>Maple Gloss | Digital Journal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #1A1A2E;
-            --card-bg: #2D1B36;
-            --text-color: #FDFBEE;
-            --accent-color: #A1887F;
-            --title-color: #D1C4E9;
-            --highlight-color: #C19A6B;
+            --bg-color: #1a1523; 
+            --card-bg: #2d1b36;  
+            --text-color: #fdfbee;
+            --accent-color: #d35400;
         }
 
         body {
-            font-family: 'Lora', serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
             margin: 0;
-            line-height: 1.8;
+            padding: 0;
+            background: radial-gradient(circle at top right, #4a3434, #1a1a2e 70%);
+            color: var(--text-color);
+            font-family: 'Lora', serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding-bottom: 80px;
         }
 
-        header {
-            text-align: center;
-            padding: 80px 20px;
-            background: linear-gradient(135deg, #2D1B36 0%, #3E2723 100%);
-            border-bottom: 3px solid var(--accent-color);
-        }
+        header { text-align: center; padding: 60px 20px 0; }
+        header h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; font-style: italic; margin: 0; }
+        header p { font-size: 0.8rem; opacity: 0.8; max-width: 450px; margin: 10px auto; line-height: 1.5; }
 
-        header h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3.5rem;
-            font-style: italic;
-            color: var(--title-color);
-            margin-bottom: 10px;
-        }
-
-        .container {
-            max-width: 800px;
+        .journal-card {
+            background-color: var(--card-bg);
+            width: 90%;
+            max-width: 550px;
             margin: 40px auto;
-            padding: 20px;
+            padding: 40px 30px;
+            border-radius: 20px;
+            border: 1px solid rgba(211, 84, 0, 0.2);
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.6);
         }
 
-        .post-card {
-            background: var(--card-bg);
-            padding: 40px;
-            border-radius: 25px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-            border-left: 6px solid var(--accent-color);
-        }
-
-        h2, h3 {
-            font-family: 'Playfair Display', serif;
-            color: var(--title-color);
-            font-style: italic;
-        }
-
-        .book-quote {
-            font-family: 'Dancing Script', cursive;
-            font-size: 1.8rem;
-            color: var(--highlight-color);
-            text-align: center;
-            margin: 30px 0;
-            padding: 20px;
-            border-top: 1px solid rgba(161, 136, 127, 0.3);
-            border-bottom: 1px solid rgba(161, 136, 127, 0.3);
-        }
-
-        .aesthetic-img {
+        /* FOTO 1 - PIEDI DAL FINESTRINO (DOMINANTE) */
+        .top-feature-img {
             width: 100%;
-            border-radius: 25px;
-            margin: 25px 0;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-            border: 1px solid rgba(161, 136, 127, 0.2);
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 15px;
+            border: 1px solid var(--accent-color);
+            margin-bottom: 30px;
         }
 
-        .mood-tag {
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--accent-color);
-            font-weight: bold;
+        .date-stamp { font-size: 0.65rem; color: var(--accent-color); text-transform: uppercase; letter-spacing: 1px; }
+        .post-title { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.5rem; margin: 15px 0 25px; text-align: center; }
+        .journal-text { font-size: 0.95rem; line-height: 1.8; text-align: left; margin-bottom: 25px; }
+
+        /* Collage Row - Pulito senza l'icona rotta */
+        .collage-row { 
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between; 
+            margin: 40px 0; 
+            gap: 20px; 
+        }
+        
+        /* FOTO 3 (Waffle) - INGRANDITA */
+        .collage-item { 
+            width: 150px; 
+            height: 150px; 
+            object-fit: cover; 
+            border: 2px solid var(--accent-color); 
+            border-radius: 15px; 
         }
 
-        .back-home {
-            text-align: center;
+        /* FOTO 4 - Gatto/Mele */
+        .cat-apples-img { width: 100%; border-radius: 15px; margin: 25px 0; border: 1px solid rgba(211, 84, 0, 0.1); }
+
+        /* FOTO 5 - Cioccolata nel mood footer - INGRANDITA */
+        .mood-footer {
+            background: rgba(255,255,255,0.03);
+            padding: 20px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            font-size: 0.9rem;
             margin-top: 40px;
-            border-top: 1px dashed var(--accent-color);
-            padding-top: 20px;
+        }
+        .mood-footer img { 
+            width: 80px; 
+            height: 80px; 
+            border-radius: 10px; 
+            object-fit: cover; 
+            border: 1px solid var(--accent-color);
         }
 
-        .back-home a {
-            color: var(--title-color);
+        .topics-section {
+            width: 90%;
+            max-width: 900px;
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 15px;
+        }
+
+        .topic-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
             text-decoration: none;
-            font-style: italic;
-        }
-
-        ul { list-style-type: '🍂 '; }
-
-        footer {
+            color: inherit;
+            border: 1px solid rgba(211, 84, 0, 0.1);
+            transition: 0.3s;
             text-align: center;
-            padding: 40px;
-            opacity: 0.7;
-            font-size: 0.8rem;
         }
+
+        .topic-card:hover { transform: translateY(-5px); border-color: var(--accent-color); }
+        .topic-card img { width: 100%; aspect-ratio: 1/1; object-fit: cover; }
+        .topic-card h3 { font-family: 'Playfair Display', serif; font-size: 0.8rem; margin: 10px; }
     </style>
 </head>
 <body>
 
     <header>
         <h1>Maple Gloss</h1>
-        <p>Current read: Lost in Irish history and cold Atlantic winds.</p>
+        <p>Documenting my world in shades of chocolate brown and deep plum. I'm just a girl who is romanticizing autumn and the magic of the year 2000.</p>
     </header>
 
-    <div class="container">
-        <article class="post-card">
-            <span class="mood-tag">The Reading Nook 📖☕</span>
+    <div class="journal-card">
+        <img src="https://i.pinimg.com/736x/23/73/b4/2373b4cfec2a3a4f07a762cf3b8463e2.jpg" class="top-feature-img" alt="Feet out window">
+        
+        <div class="date-stamp">April 11, 2026 ✨</div>
+        <div class="post-title">Autumn Aesthetic & Y2K Vibes</div>
 
-            <img src="https://i.pinimg.com/736x/87/0c/36/870c3605e554907a9092497d39a3f295.jpg" class="aesthetic-img">
+        <div class="journal-text">
+            A soft, nostalgic corner of the internet inspired by early 2000s autumn—when everything felt a little slower, a little warmer, and effortlessly cool. 
+            <br><br>
+            Think worn-in denim, chunky knits, thrifted layers, and that golden-hour glow that made every outfit look iconic without trying too hard.
+        </div>
 
-            <h2>Across the Bitter Sea</h2>
+        <div class="collage-row">
+            <img src="https://i.pinimg.com/736x/bf/0c/fb/bf0cfb2043036314168d43e155528cfa.jpg" class="collage-item" alt="Waffles">
             
-            <p>
-                I finally picked up Across the Bitter Sea and I have to say it is the kind of heartbreaking and sweeping historical drama that I needed for these chilly nights. Eilis Dillon writes in a way that feels like a breeze from the Irish coast. It is raw and beautiful and deeply moving.
+            <p style="font-size: 0.75rem; font-style: italic; flex: 1; text-align: center; opacity: 0.8; padding: 0 10px;">
+                "It’s a mix of casual street style and cozy comfort..."
             </p>
-
-            <div class="book-quote">
-                "A story of love, famine and the fierce fight for a home."
+            
             </div>
 
-            <p>
-                The story of Across the Bitter Sea spans decades of history starting from the Great Famine. Across the Bitter Sea follows the lives of Alice, Samuel and Morgan. Three people whose lives are tied together by love and the desperate struggle for independence. 
-            </p>
+        <div class="journal-text">
+            It’s a mix of casual street style and cozy comfort, where fashion feels personal, a bit undone, and quietly confident.
+        </div>
 
-            <img src="https://i.pinimg.com/736x/83/b1/74/83b174aa4b41471c987e75a261970f2d.jpg" class="aesthetic-img" alt="Candlelight Reading">
+        <img src="https://i.pinimg.com/1200x/37/3a/e7/373ae722ff6ee3ad18971d43339f002a.jpg" class="cat-apples-img" alt="Autumn cat">
 
-            <p>
-                What I love most about Across the Bitter Sea is how it does not just talk about history it makes you feel the weight of the land and the bitterness of the sea that they had to cross.
-            </p>
+        <div class="journal-text">
+            This blog captures that mood—faded leaves, old playlists, film camera vibes, and outfits that tell stories without needing to be loud.
+        </div>
 
-            <h3>Why Across the Bitter Sea fits the mood:</h3>
-            <ul>
-                <li><strong>Atmospheric:</strong> It is rainy and misty. Perfect for reading under a chunky knit blanket.</li>
-                <li><strong>Nostalgic:</strong> Even though Across the Bitter Sea is historical the themes of longing and family feel timeless and personal.</li>
-                <li><strong>Emotional Depth:</strong> Across the Bitter Sea is not a light read. It is the kind of book that stays with you long after you have closed it.</li>
-            </ul>
-
-            <img src="https://i.pinimg.com/736x/4d/91/9f/4d919f18a427438e364e528b375b4f0b.jpg" class="aesthetic-img">
-
-            <p>
-                If you are into family sagas that feel like a film camera captured them—grainy, emotional, and authentic—you definitely need to give Across the Bitter Sea a chance. It is making my autumn evenings feel a lot more meaningful.
-            </p>
-
-            <div class="back-home">
-                <a href="index.html">« Back to the journal</a>
-            </div>
-
-            <p style="text-align: right; font-size: 1.5rem; margin-top: 20px;">📜🕯️🍂</p>
-        </article>
+        <div class="mood-footer">
+            <img src="https://i.pinimg.com/736x/5e/f2/5f/5ef25fbb9b186af489312e3ed0959054.jpg" alt="Hot cocoa">
+            <div>Current mood: Hot chocolate with extra cream and nostalgic film cameras. ☕🎞️</div>
+        </div>
     </div>
 
-    <footer>
-        &copy; 2026 Maple Gloss. Made with ♡
-    </footer>
+    <div class="topics-section">
+        <a href="cinnamon-rolls.html" class="topic-card">
+            <img src="https://i.pinimg.com/736x/d5/68/92/d56892ce5f763e87a12fc6932fc7f9da.jpg" alt="Cinnamon">
+            <h3>Cinnamon Rolls</h3>
+        </a>
+        <a href="pumpkin-muffins.html" class="topic-card">
+            <img src="https://i.pinimg.com/1200x/fc/53/c8/fc53c8fef93f060faef1111cf82dbbb3.jpg" alt="Muffins">
+            <h3>Pumpkin Muffins</h3>
+        </a>
+        <a href="moon-water.html" class="topic-card">
+            <img src="https://i.pinimg.com/736x/7c/a5/bd/7ca5bd21771abeee50393455cc6f7561.jpg" alt="Moon Water">
+            <h3>Moon Rituals</h3>
+        </a>
+        <a href="herb-magic.html" class="topic-card">
+            <img src="https://i.pinimg.com/1200x/ad/b4/d7/adb4d778e5910ca8bea16e6fa16bfae3.jpg" alt="Herbs">
+            <h3>Herb Magic</h3>
+        </a>
+        <a href="bitter-sea.html" class="topic-card">
+            <img src="https://m.media-amazon.com/images/I/511oZaXJsLL._AC_UF1000,1000_QL80_.jpg" alt="Book">
+            <h3>Bitter Sea</h3>
+        </a>
+    </div>
 
 </body>
 </html>
