@@ -3,249 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maple Gloss | Digital Diary</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <title>Maple Gloss | Digital Journal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg-color: #1A1A2E;
             --card-bg: #2D1B36;
             --text-color: #FDFBEE;
-            --accent-color: #A1887F;
-            --title-color: #D1C4E9;
+            --accent-color: #D35400;
+            --sidebar-color: #3D2B46;
         }
+        body { font-family: 'Lora', serif; background-color: var(--bg-color); color: var(--text-color); margin: 0; display: flex; flex-direction: column; }
         
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            margin: 0;
-            line-height: 1.6;
-        }
+        header { text-align: center; padding: 50px 20px; background: linear-gradient(135deg, #2D1B36 0%, #1A1A2E 100%); }
+        h1 { font-family: 'Playfair Display', serif; font-size: 3rem; font-style: italic; margin: 0; }
+
+        .main-wrapper { display: flex; max-width: 1200px; margin: 0 auto; padding: 40px 20px; gap: 40px; }
         
-        header {
-            text-align: center;
-            padding: 80px 20px;
-            background: linear-gradient(135deg, #2D1B36 0%, #3E2723 100%);
-            border-bottom: 3px solid var(--accent-color);
-        }
+        .content-grid { flex: 3; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px; }
+
+        .sidebar { flex: 1; background: var(--sidebar-color); padding: 30px; border-radius: 20px; height: fit-content; position: sticky; top: 20px; }
+        .sidebar h3 { font-family: 'Playfair Display', serif; border-bottom: 1px solid var(--accent-color); padding-bottom: 10px; }
+        .sidebar ul { list-style: none; padding: 0; }
+        .sidebar li { margin: 15px 0; }
+        .sidebar a { color: var(--text-color); text-decoration: none; font-size: 0.9rem; transition: 0.3s; }
+        .sidebar a:hover { color: var(--accent-color); padding-left: 5px; }
+
+        /* Card dei Post con Immagini Quadrate */
+        .post-card { background: var(--card-bg); border-radius: 20px; overflow: hidden; transition: transform 0.3s; box-shadow: 0 10px 20px rgba(0,0,0,0.3); text-decoration: none; color: inherit; display: block; }
+        .post-card:hover { transform: translateY(-5px); }
         
-        header h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3.5rem;
-            margin-bottom: 10px;
-            font-weight: 400;
-            font-style: italic;
-            color: var(--title-color);
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-        
-        header p {
-            max-width: 600px;
-            margin: 0 auto;
-            font-style: italic;
-            color: #D7CCC8;
-            font-size: 1.1rem;
-        }
-        
-        .container {
-            max-width: 850px;
-            margin: 40px auto;
-            padding: 20px;
-        }
-        
-        .post-card {
-            background: var(--card-bg);
-            padding: 40px;
-            margin-bottom: 40px;
-            border-radius: 25px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            border-left: 6px solid var(--accent-color);
-            position: relative;
-        }
-        
-        .post-date {
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            color: var(--accent-color);
-            font-weight: bold;
-            display: block;
-            margin-bottom: 15px;
-        }
-        
-        h2 {
-            font-family: 'Playfair Display', serif;
-            color: var(--title-color);
-            text-align: center;
-            font-style: italic;
-            margin-bottom: 30px;
+        .post-card img { 
+            width: 100%; 
+            aspect-ratio: 1 / 1; 
+            object-fit: cover; 
+            display: block; 
         }
 
-        .img-circle {
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 3px solid var(--accent-color);
-            margin: 0 auto 25px auto;
-            display: block;
-        }
-
-        .img-float-right {
-            width: 180px;
-            border-radius: 25px;
-            float: right;
-            margin: 10px 0 15px 20px;
-            box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
-        }
-
-        .img-float-left {
-            width: 160px;
-            border-radius: 25px;
-            float: left;
-            margin: 10px 20px 15px 0;
-            box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
-        }
-
-        .img-center-large {
-            width: 100%;
-            max-width: 500px;
-            border-radius: 30px;
-            display: block;
-            margin: 30px auto;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-        }
-
-        .mood-box {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            background: rgba(255, 255, 255, 0.05);
-            padding: 20px;
-            border-radius: 25px;
-            margin-top: 30px;
-            clear: both;
-        }
-
-        .mood-img {
-            width: 100px;
-            height: 100px;
-            border-radius: 20px;
-            object-fit: cover;
-        }
-
-        footer {
-            text-align: center;
-            padding: 60px;
-            font-size: 0.8rem;
-            color: #888;
-        }
-
-        .cta-container {
-            text-align: center;
-            margin-top: 40px;
-            border-top: 1px dashed var(--accent-color);
-            padding-top: 30px;
-            clear: both;
-        }
-
-        .btn {
-            color: var(--title-color);
-            text-decoration: none;
-            font-style: italic;
-            border: 1px solid var(--accent-color);
-            padding: 12px 30px;
-            border-radius: 40px;
-            display: inline-block;
-            transition: all 0.3s ease;
-            margin: 5px;
-        }
-
-        .btn:hover {
-            background-color: var(--accent-color);
-            color: var(--bg-color);
-        }
+        .post-info { padding: 20px; }
+        .post-category { font-size: 0.7rem; text-transform: uppercase; color: var(--accent-color); letter-spacing: 2px; font-weight: bold; }
+        .post-info h2 { font-family: 'Playfair Display', serif; margin: 10px 0; font-size: 1.3rem; line-height: 1.2; }
+        .post-info p { font-size: 0.85rem; opacity: 0.8; margin-bottom: 0; }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Maple Gloss</h1>
-        <p>Documenting my world in shades of chocolate brown and deep plum. I’m just a girl who is romanticizing autumn and the magic of the year 2000.</p>
-    </header>
+<header>
+    <h1>Maple Gloss</h1>
+    <p>A sanctuary for seasonal souls and kitchen magic.</p>
+</header>
 
-    <div class="container">
-        <article class="post-card">
-            <span class="post-date">April 8, 2026 ✨</span>
-            
-            <img src="https://i.pinimg.com/736x/23/73/b4/2373b4cfec2a3a4f07a762cf3b8463e2.jpg" class="img-circle">
-
-            <h2>Autumn Aesthetic & Y2K Vibes</h2>
-
-            <p>
-                A soft, nostalgic corner of the internet inspired by early 2000s autumn—when everything felt a little slower, a little warmer, and effortlessly cool.
-            </p>
-
-            <img src="https://i.pinimg.com/736x/94/1e/61/941e610bb76fe5faaa8506cc0f90ded9.jpg" class="img-float-right">
-
-            <p>
-                Think worn-in denim, chunky knits, thrifted layers, and that golden-hour glow that made every outfit look iconic without trying too hard.
-            </p>
-
-            <img src="https://i.pinimg.com/736x/bf/0c/fb/bf0cfb2043036314168d43e155528cfa.jpg" class="img-float-left">
-
-            <p>
-                It’s a mix of casual street style and cozy comfort, where fashion feels personal, a bit undone, and quietly confident.
-            </p>
-
-            <p>
-                This blog captures that mood—faded leaves, old playlists, film camera vibes, and outfits that tell stories without needing to be loud.
-            </p>
-
-            <img src="https://i.pinimg.com/1200x/37/3a/e7/373ae722ff6ee3ad18971d43339f002a.jpg" class="img-center-large">
-
-            <div class="mood-box">
-                <img src="https://i.pinimg.com/736x/5e/f2/5f/5ef25fbb9b186af489312e3ed0959054.jpg" class="mood-img">
-                <p style="margin: 0; font-style: italic; color: #D7CCC8;">
-                    Current mood: Hot chocolate with extra cream and nostalgic film cameras. ☕🎞️
-                </p>
+<div class="main-wrapper">
+    <main class="content-grid">
+        
+        <a href="cinnamon-rolls.html" class="post-card">
+            <img src="https://i.pinimg.com/736x/d5/68/92/d56892ce5f763e87a12fc6932fc7f9da.jpg" alt="Cinnamon Rolls">
+            <div class="post-info">
+                <span class="post-category">Kitchen Alchemy</span>
+                <h2>Cinnamon Rolls: Golden Glow</h2>
+                <p>A ritual of warmth and comfort for crisp mornings...</p>
             </div>
+        </a>
 
-<div class="cta-container">
-    <a href="cinnamon-rolls.html" class="btn">
-        Explore: Cinnamon Rolls & Kitchen Magic 🥧✨
-    </a>
-    
-    <br>
+        <a href="pumpkin-muffins.html" class="post-card">
+            <img src="https://i.pinimg.com/1200x/fc/53/c8/fc53c8fef93f060faef1111cf82dbbb3.jpg" alt="Pumpkin Muffins">
+            <div class="post-info">
+                <span class="post-category">Seasonal Eats</span>
+                <h2>Fluffy Pumpkin Muffins</h2>
+                <p>The ultimate Y2K autumn vibe in every bite...</p>
+            </div>
+        </a>
 
-    <a href="bitter-sea.html" class="btn">
-        Reading Nook: Across the Bitter Sea 📖🍂
-    </a>
+        <a href="moon-water.html" class="post-card">
+            <img src="https://i.pinimg.com/736x/7c/a5/bd/7ca5bd21771abeee50393455cc6f7561.jpg" alt="Moon Water">
+            <div class="post-info">
+                <span class="post-category">Witchy Corner</span>
+                <h2>Moon Water Ritual</h2>
+                <p>Harnessing the silver glow of spring nights...</p>
+            </div>
+        </a>
 
-    <br>
+        <a href="herb-magic.html" class="post-card">
+            <img src="https://i.pinimg.com/1200x/ad/b4/d7/adb4d778e5910ca8bea16e6fa16bfae3.jpg" alt="Herb Magic">
+            <div class="post-info">
+                <span class="post-category">Witchy Corner</span>
+                <h2>The Magic of Herbs</h2>
+                <p>Transforming your cupboard into a grimorio...</p>
+            </div>
+        </a>
 
-    <a href="pumpkin-muffins.html" class="btn">
-        Autumn Flavors: Pumpkin Spice Muffins 🎃🧁
-    </a>
+        <a href="book-review.html" class="post-card">
+            <img src="https://m.media-amazon.com/images/I/511oZaXJsLL._AC_UF1000,1000_QL80_.jpg" alt="Book Cover">
+            <div class="post-info">
+                <span class="post-category">Book Club</span>
+                <h2>Across the Bitter Sea</h2>
+                <p>A deep dive into this hauntingly beautiful tale...</p>
+            </div>
+        </a>
 
-    <br>
-    
-<a href="moon-water.html" class="btn">
-    Witchy Corner: Moon Water Ritual 🌙✨
-    </a>
+    </main>
 
-    <a href="herb-magic.html" class="btn">
-    Kitchen Alchemy: The Magic of Herbs 🌿✨
-    </a>
-    
+    <aside class="sidebar">
+        <h3>Categories</h3>
+        <ul>
+            <li><a href="#">✨ Witchy Corner</a></li>
+            <li><a href="#">🍞 Kitchen Alchemy</a></li>
+            <li><a href="#">📖 Book Club</a></li>
+            <li><a href="#">💄 Aesthetic Guides</a></li>
+        </ul>
+
+        <h3 style="margin-top: 40px;">Current Mood</h3>
+        <p style="font-style: italic; font-size: 0.9rem; color: var(--accent-color);">
+            "Sipping chai tea and dreaming of moonlight."
+        </p>
+    </aside>
 </div>
-
-            <p style="text-align: right; font-size: 1.5rem; margin-top: 30px; clear: both;">🍁🧸🥞</p>
-        </article>
-    </div>
-
-    <footer>
-        &copy; 2026 Maple Gloss. Made with ♡
-    </footer>
 
 </body>
 </html>
