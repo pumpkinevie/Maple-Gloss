@@ -3,186 +3,208 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maple Gloss | Y2K Autumn collage</title>
+    <title>Maple Gloss | Digital Journal</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --bg-color: #1A1A2E; /* Deep dark blue-black background */
-            --card-bg: #2D1B36; /* Plum/purple card from screenshot */
-            --text-color: #FDFBEE; /* Cream light text */
-            --accent-color: #D35400; /* Burnt orange */
-        }
-
         body {
-            font-family: 'Lora', serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
             margin: 0;
+            padding: 0;
+            /* Gradiente dello sfondo come nello screenshot */
+            background: radial-gradient(circle at top right, #4a3434, #1a1a2e 60%);
+            color: #fdfbee;
+            font-family: 'Lora', serif;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
             min-height: 100vh;
-            padding: 20px;
         }
 
-        /* --- THE CENTRAL JOURNAL CARD --- */
-        .journal-container {
-            background-color: var(--card-bg);
-            max-width: 600px;
-            padding: 50px;
-            border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.6);
-            position: relative; /* Essential for scattering photos inside */
+        header {
             text-align: center;
+            padding: 60px 20px 20px;
         }
 
-        h1 {
+        header h1 {
             font-family: 'Playfair Display', serif;
             font-size: 3rem;
             font-style: italic;
-            color: var(--text-color);
-            margin-top: 0;
-            margin-bottom: 5px;
+            margin: 0;
         }
 
-        .motto {
-            font-size: 0.9rem;
+        header p {
+            font-size: 0.8rem;
             opacity: 0.8;
-            font-style: italic;
-            margin-bottom: 40px;
+            max-width: 400px;
+            margin: 10px auto;
+            line-height: 1.4;
         }
 
-        /* --- LE IMMAGINI SPARSE ( Collage Style ) --- */
-        
-        .aesthetic-img {
-            object-fit: cover;
-            border: 2px solid var(--accent-color);
-            transition: transform 0.3s;
+        /* La card centrale viola */
+        .journal-card {
+            background-color: #2d1b36;
+            width: 90%;
+            max-width: 500px;
+            margin: 40px auto;
+            padding: 40px 30px;
+            border-radius: 15px;
+            border: 1px solid rgba(211, 84, 0, 0.3);
+            position: relative;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        }
+
+        .date-stamp {
             position: absolute;
-            cursor: pointer;
-        }
-
-        .aesthetic-img:hover {
-            transform: scale(1.1) rotate(0deg) !important;
-            z-index: 10;
-        }
-
-        /* Foto 1: Cinnamon Rolls (Piccola tonda in alto a sinistra) */
-        .img-1 {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
             top: 15px;
-            left: 15px;
-            transform: rotate(-10deg);
+            left: 20px;
+            font-size: 0.6rem;
+            text-transform: uppercase;
+            color: #D35400;
         }
 
-        /* Foto 2: Pumpkin Muffins (Media arrotondata a destra del titolo) */
-        .img-2 {
+        /* Foto profilo tonda centrale */
+        .profile-wrapper {
             width: 100px;
             height: 100px;
-            border-radius: 20px;
-            top: 25px;
-            right: 20px;
-            transform: rotate(15deg);
-        }
-
-        /* Foto 3: Moon Water (Grande tonda al centro) */
-        .img-3 {
-            width: 160px;
-            height: 160px;
+            margin: 0 auto 30px;
             border-radius: 50%;
-            position: relative; /* Inserted inside the text flow */
-            margin: 20px auto;
-            display: block;
-            border-color: #9D81BA; /* Viola magico */
+            border: 1px solid #D35400;
+            overflow: hidden;
         }
 
-        /* Foto 4: Herb Magic (Rettangolare arrotondata in basso a sinistra) */
-        .img-4 {
-            width: 130px;
-            height: 100px;
-            border-radius: 15px;
-            bottom: 20px;
-            left: 20px;
+        .profile-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .post-title {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .journal-text {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            text-align: left;
+            margin-bottom: 30px;
+        }
+
+        /* Foto sparse stile collage */
+        .collage-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .collage-img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border: 1px solid #D35400;
+            border-radius: 10px;
             transform: rotate(-5deg);
         }
 
-        /* Foto 5: Book Review (Media tonda in basso a destra) */
-        .img-5 {
-            width: 95px;
-            height: 95px;
+        .collage-img.round {
             border-radius: 50%;
-            bottom: 15px;
-            right: 15px;
-            transform: rotate(10deg);
+            transform: rotate(5deg);
         }
 
-        /* --- THE MAIN DESCRIPTION TEXT --- */
-        .description-block {
-            text-align: left;
-            font-size: 1rem;
-            line-height: 1.7;
-            margin-bottom: 50px;
+        /* Immagine grande del gatto/mele */
+        .main-post-img {
+            width: 100%;
+            border-radius: 15px;
+            margin: 20px 0;
         }
 
-        /* --- THE ORIGINAL BUTTONS (Stile pillola, arrotondati) --- */
-        .nav-buttons {
+        /* Box "Current Mood" in basso */
+        .mood-box {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 10px;
             display: flex;
-            flex-direction: column;
+            align-items: center;
             gap: 15px;
-            max-width: 320px;
-            margin: 0 auto;
+            margin-top: 30px;
+            font-size: 0.8rem;
         }
 
-        .btn {
-            background-color: rgba(211, 84, 0, 0.1);
-            color: var(--text-color);
-            text-decoration: none;
-            padding: 12px 20px;
-            border-radius: 50px;
+        .mood-box img {
+            width: 50px;
+            height: 50px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .footer-icons {
+            text-align: right;
+            margin-top: 20px;
             font-size: 1rem;
-            border: 1px solid var(--accent-color);
-            transition: 0.3s;
         }
 
-        .btn:hover {
-            background-color: var(--accent-color);
-            transform: scale(1.05);
+        footer {
+            margin-top: auto;
+            padding: 20px;
+            font-size: 0.6rem;
+            opacity: 0.5;
         }
-
     </style>
 </head>
 <body>
 
-    <div class="journal-container">
-        
-        <a href="cinnamon-rolls.html"><img src="https://i.pinimg.com/736x/d5/68/92/d56892ce5f763e87a12fc6932fc7f9da.jpg" class="aesthetic-img img-1" alt="Cinnamon Rolls"></a>
-        <a href="pumpkin-muffins.html"><img src="https://i.pinimg.com/1200x/fc/53/c8/fc53c8fef93f060faef1111cf82dbbb3.jpg" class="aesthetic-img img-2" alt="Pumpkin Muffins"></a>
-        <a href="moon-water.html"><img src="https://i.pinimg.com/736x/7c/a5/bd/7ca5bd21771abeee50393455cc6f7561.jpg" class="aesthetic-img img-3" alt="Moon Water Ritual"></a>
-        <a href="herb-magic.html"><img src="https://i.pinimg.com/1200x/ad/b4/d7/adb4d778e5910ca8bea16e6fa16bfae3.jpg" class="aesthetic-img img-4" alt="Herb Magic"></a>
-        <a href="book-review.html"><img src="https://m.media-amazon.com/images/I/511oZaXJsLL._AC_UF1000,1000_QL80_.jpg" class="aesthetic-img img-5" alt="Book Club: Bitter Sea"></a>
-
+    <header>
         <h1>Maple Gloss</h1>
-        <p class="motto">Documenting my world in shades of chocolate brown and deep plum.</p>
+        <p>Documenting my world in shades of chocolate brown and deep plum. I'm just a girl who is romanticizing autumn and the magic of the year 2000.</p>
+    </header>
 
-        <div class="description-block">
-            <p>Un angolo morbido e nostalgico di internet ispirato all'autunno dei primi anni 2000, quando tutto sembrava un po' più lento, un po' più caldo e disinvoltamente cool.</p>
-            
-            <p>Pensate a jeans strappati, maglie grosse, strati ereditati e quel bagliore dell'ora d'oro che rendeva ogni outfit iconico senza sforzo.</p>
-            
-            <p>È un mix di street style casual e comfort accogliente, dove la moda sembra personale, un po' disordinata e discretamente sicura di sé. Questo blog cattura quell'atmosfera: foglie sbiadite, vecchie playlist, vibrazioni da macchina fotografica analogica e outfit che raccontano storie senza bisogno di essere appariscenti.</p>
+    <div class="journal-card">
+        <span class="date-stamp">April 11, 2026 ✨</span>
+
+        <div class="profile-wrapper">
+            <img src="https://i.pinimg.com/736x/bf/0c/fb/bf0cfb2043036314168d43e155528cfa.jpg" alt="Profile">
         </div>
 
-        <div class="nav-buttons">
-            <a href="cinnamon-rolls.html" class="btn">Cinnamon Rolls Recipe 🍞</a>
-            <a href="pumpkin-muffins.html" class="btn">Pumpkin Muffins Y2K 🎃</a>
-            <a href="moon-water.html" class="btn">Witchy Moon Ritual 🌙</a>
-            <a href="herb-magic.html" class="btn">Kitchen Herb Alchemy 🌿</a>
-            <a href="book-review.html" class="btn">Book Club: Bitter Sea 📖</a>
+        <div class="post-title">Autumn Aesthetic & Y2K Vibes</div>
+
+        <div class="journal-text">
+            Un angolo morbido e nostalgico di internet ispirato all'autunno dei primi anni 2000, quando tutto sembrava un po' più lento, un po' più caldo e disinvoltamente cool. 
+            <br><br>
+            Pensate a jeans strappati, maglie grosse, strati ereditati e quel bagliore dell'ora d'oro che rendeva ogni outfit iconico senza sforzo.
         </div>
 
+        <div class="collage-container">
+            <img src="https://i.pinimg.com/736x/23/73/b4/2373b4cfec2a3a4f07a762cf3b8463e2.jpg" class="collage-img" alt="Cinnamon">
+            <div style="font-size: 0.7rem; font-style: italic; max-width: 150px; text-align: center;">
+                "It's a mix of casual street style and cozy comfort..."
+            </div>
+            <img src="https://i.pinimg.com/736x/94/1e/61/941e610bb76fe5faaa8506cc0f90ded9.jpg" class="collage-img round" alt="Aesthetic">
+        </div>
+
+        <div class="journal-text">
+            È un mix di street style casual e comfort accogliente, dove la moda sembra personale, un po' disordinata e discretamente sicura di sé.
+        </div>
+
+        <img src="https://i.pinimg.com/1200x/37/3a/e7/373ae722ff6ee3ad18971d43339f002a.jpg" class="main-post-img" alt="Autumn cat and apples">
+
+        <div class="journal-text">
+            Questo blog cattura quell'atmosfera: foglie sbiadite, vecchie playlist, vibrazioni da macchina fotografica analogica e outfit che raccontano storie senza bisogno di essere appariscenti.
+        </div>
+
+        <div class="mood-box">
+            <img src="https://i.pinimg.com/736x/5e/f2/5f/5ef25fbb9b186af489312e3ed0959054.jpg" alt="Hot chocolate">
+            <div>Current mood: Hot chocolate with extra cream and nostalgic film cameras. ☕🎞️</div>
+        </div>
+
+        <div class="footer-icons">🍁 🧸 👒</div>
     </div>
+
+    <footer>
+        © 2026, Made with witchy ♡
+    </footer>
 
 </body>
 </html>
