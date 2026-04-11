@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moon Water Ritual | Witchy Vibes</title>
+    <title>Moon Water Ritual | Spring Awakening</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #0F0C29; /* Blu notte profondo */
+            --bg-color: #0F0C29; /* Deep night blue */
             --card-bg: #1B1435;
             --text-color: #E0E0E0;
-            --accent-color: #9D81BA; /* Lavanda argenteo */
+            --accent-color: #9D81BA; /* Silvery lavender */
             --moon-glow: #FDFBEE;
         }
         body { font-family: 'Lora', serif; background-color: var(--bg-color); color: var(--text-color); line-height: 1.8; margin: 0; }
@@ -19,21 +19,46 @@
         .ritual-card { background: var(--card-bg); padding: 40px; border-radius: 30px; box-shadow: 0 0 40px rgba(157, 129, 186, 0.1); border: 1px solid rgba(157, 129, 186, 0.2); }
         h1, h2, h3 { font-family: 'Playfair Display', serif; color: var(--accent-color); font-style: italic; }
         
+        /* Immagine 2: Quella Principale (la teglia/mood) */
         .aesthetic-img { 
             width: 100%; 
             border-radius: 25px; 
             margin: 25px 0; 
-            filter: grayscale(20%) brightness(90%);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            display: block;
         }
 
-        .guide-box { 
+        /* Immagine 1: Quella più piccola (laterale/mood) */
+        .img-small-float {
+            width: 250px;
+            height: auto;
+            border-radius: 20px;
+            float: left;
+            margin: 10px 25px 20px 0;
+            border: 1px solid var(--accent-color);
+        }
+
+        /* Immagine 3: Quella tonda (più in basso) */
+        .img-circle {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid var(--accent-color);
+            margin: 30px auto;
+            display: block;
+        }
+
+        .ingredients-box, .method-box { 
             background: rgba(157, 129, 186, 0.05); 
             padding: 25px; 
             border-radius: 20px; 
             margin: 20px 0; 
             border: 1px dashed var(--accent-color);
+            clear: both;
         }
 
+        .quote-box { background: rgba(161, 136, 127, 0.1); padding: 20px; border-radius: 15px; font-style: italic; text-align: center; margin-top: 30px; border: 1px solid var(--accent-color); clear: both; }
         .back-link { display: block; text-align: center; margin-top: 30px; color: var(--accent-color); text-decoration: none; font-style: italic; }
         
         .moon-phases {
@@ -56,9 +81,10 @@
             <div class="moon-phases">🌑🌒🌓🌔🌕</div>
             
             <h2>Spring Full Moon Water ✨💧</h2>
-            <p>Moon water is a simple yet powerful way to store lunar energy. In spring, this water is charged with the vibrations of growth, renewal, and new beginnings. It’s like catching starlight in a jar.</p>
+            
+            <img src="https://i.pinimg.com/736x/11/5f/af/115faf30f3e9370ef70ecfa9ba520504.jpg" class="aesthetic-img" alt="Moon water aesthetic mood">
 
-            <img src="https://i.pinimg.com/736x/83/87/08/838708764032d1f97486e969a5843486.jpg" class="aesthetic-img" alt="Moon water aesthetic">
+            <p>Moon water is a simple yet powerful way to store lunar energy. In spring, this water is charged with the vibrations of growth, renewal, and new beginnings. It’s like catching starlight in a jar.</p>
 
             <div class="guide-box">
                 <h3>The Ritual:</h3>
@@ -70,8 +96,12 @@
                 </ul>
             </div>
 
+            <img src="https://i.pinimg.com/1200x/5c/90/db/5c90dbb14b3347002e4dbf37c66ab8e3.jpg" class="img-small-float" alt="Vintage aesthetic photo">
+
             <h3>How to use it:</h3>
             <p>Use your Moon Water to water your spring plants, add a few drops to your bath for spiritual cleansing, or use it to clean your altar space. It’s a touch of magic in your daily routine.</p>
+
+            <img src="https://i.pinimg.com/1200x/a5/fa/ad/a5faad67babad58b2dca59bea11faedc.jpg" class="img-circle" alt="Moon phase circular photo">
 
             <p style="text-align: center; font-style: italic; margin-top: 40px; color: var(--accent-color);">
                 "Stay wild, moon child."
