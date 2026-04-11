@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maple Gloss | Y2K Autumn Journal</title>
+    <title>Maple Gloss | Y2K Autumn collage</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #1A1A2E; /* Blu scuro profondo dello screenshot */
-            --card-bg: #2D1B36; /* Viola scuro della card dello screenshot */
-            --text-color: #FDFBEE; /* Crema chiaro */
-            --accent-color: #D35400; /* Arancio bruciato */
+            --bg-color: #1A1A2E; /* Deep dark blue-black background */
+            --card-bg: #2D1B36; /* Plum/purple card from screenshot */
+            --text-color: #FDFBEE; /* Cream light text */
+            --accent-color: #D35400; /* Burnt orange */
         }
 
         body {
@@ -18,21 +18,21 @@
             background-color: var(--bg-color);
             color: var(--text-color);
             margin: 0;
-            padding: 20px;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            padding: 20px;
         }
 
-        /* Contenitore principale "a diario" al centro */
+        /* --- THE CENTRAL JOURNAL CARD --- */
         .journal-container {
             background-color: var(--card-bg);
             max-width: 600px;
-            padding: 40px;
-            border-radius: 25px; /* Bordi molto arrotondati come richiesto */
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            position: relative;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+            position: relative; /* Essential for scattering photos inside */
             text-align: center;
         }
 
@@ -42,31 +42,23 @@
             font-style: italic;
             color: var(--text-color);
             margin-top: 0;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
         }
 
-        .subtitle {
+        .motto {
             font-size: 0.9rem;
             opacity: 0.8;
             font-style: italic;
             margin-bottom: 40px;
         }
 
-        /* Il testo descrittivo che mi hai dato */
-        .description-text {
-            font-size: 1rem;
-            line-height: 1.7;
-            text-align: left;
-            margin-bottom: 40px;
-        }
-
-        /* --- IMMAGINI SPARSE (Il cuore del layout) --- */
+        /* --- LE IMMAGINI SPARSE ( Collage Style ) --- */
         
         .aesthetic-img {
             object-fit: cover;
             border: 2px solid var(--accent-color);
             transition: transform 0.3s;
-            position: absolute; /* Per spargerle */
+            position: absolute;
             cursor: pointer;
         }
 
@@ -75,65 +67,72 @@
             z-index: 10;
         }
 
-        /* Foto 1: Cinnamon Rolls (Piccola in alto a sinistra) */
+        /* Foto 1: Cinnamon Rolls (Piccola tonda in alto a sinistra) */
         .img-1 {
             width: 80px;
             height: 80px;
-            border-radius: 50%; /* Tonda */
-            top: 10px;
-            left: 10px;
+            border-radius: 50%;
+            top: 15px;
+            left: 15px;
             transform: rotate(-10deg);
         }
 
-        /* Foto 2: Pumpkin Muffins (Media a destra del titolo) */
+        /* Foto 2: Pumpkin Muffins (Media arrotondata a destra del titolo) */
         .img-2 {
             width: 100px;
             height: 100px;
-            border-radius: 20px; /* Bordi arrotondati */
-            top: 20px;
-            right: 15px;
+            border-radius: 20px;
+            top: 25px;
+            right: 20px;
             transform: rotate(15deg);
         }
 
-        /* Foto 3: Moon Water (Grande al centro del testo) */
+        /* Foto 3: Moon Water (Grande tonda al centro) */
         .img-3 {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%; /* Tonda */
-            position: relative; /* Inserita nel flusso del testo */
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            position: relative; /* Inserted inside the text flow */
             margin: 20px auto;
             display: block;
-            border-color: #9D81BA; /* Colore viola magico */
+            border-color: #9D81BA; /* Viola magico */
         }
 
-        /* Foto 4: Herb Magic (Rettangolare in basso a sinistra) */
+        /* Foto 4: Herb Magic (Rettangolare arrotondata in basso a sinistra) */
         .img-4 {
-            width: 120px;
-            height: 90px;
-            border-radius: 15px; /* Bordi arrotondati */
+            width: 130px;
+            height: 100px;
+            border-radius: 15px;
             bottom: 20px;
-            left: 15px;
+            left: 20px;
             transform: rotate(-5deg);
         }
 
-        /* Foto 5: Book Cover (Tonda in basso a destra) */
+        /* Foto 5: Book Review (Media tonda in basso a destra) */
         .img-5 {
-            width: 90px;
-            height: 90px;
-            border-radius: 50%; /* Tonda */
+            width: 95px;
+            height: 95px;
+            border-radius: 50%;
             bottom: 15px;
             right: 15px;
             transform: rotate(10deg);
         }
 
-        /* --- BOTTONI DI NAVIGAZIONE (Stile Home originale, arrotondati) --- */
-        
+        /* --- THE MAIN DESCRIPTION TEXT --- */
+        .description-block {
+            text-align: left;
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 50px;
+        }
+
+        /* --- THE ORIGINAL BUTTONS (Stile pillola, arrotondati) --- */
         .nav-buttons {
             display: flex;
             flex-direction: column;
             gap: 15px;
-            max-width: 300px;
-            margin: 40px auto 0 auto;
+            max-width: 320px;
+            margin: 0 auto;
         }
 
         .btn {
@@ -162,12 +161,12 @@
         <a href="pumpkin-muffins.html"><img src="https://i.pinimg.com/1200x/fc/53/c8/fc53c8fef93f060faef1111cf82dbbb3.jpg" class="aesthetic-img img-2" alt="Pumpkin Muffins"></a>
         <a href="moon-water.html"><img src="https://i.pinimg.com/736x/7c/a5/bd/7ca5bd21771abeee50393455cc6f7561.jpg" class="aesthetic-img img-3" alt="Moon Water Ritual"></a>
         <a href="herb-magic.html"><img src="https://i.pinimg.com/1200x/ad/b4/d7/adb4d778e5910ca8bea16e6fa16bfae3.jpg" class="aesthetic-img img-4" alt="Herb Magic"></a>
-        <a href="book-review.html"><img src="https://m.media-amazon.com/images/I/511oZaXJsLL._AC_UF1000,1000_QL80_.jpg" class="aesthetic-img img-5" alt="Book Review"></a>
+        <a href="book-review.html"><img src="https://m.media-amazon.com/images/I/511oZaXJsLL._AC_UF1000,1000_QL80_.jpg" class="aesthetic-img img-5" alt="Book Club: Bitter Sea"></a>
 
         <h1>Maple Gloss</h1>
-        <p class="subtitle">Documenting my world in shades of chocolate brown and deep plum.</p>
+        <p class="motto">Documenting my world in shades of chocolate brown and deep plum.</p>
 
-        <div class="description-text">
+        <div class="description-block">
             <p>Un angolo morbido e nostalgico di internet ispirato all'autunno dei primi anni 2000, quando tutto sembrava un po' più lento, un po' più caldo e disinvoltamente cool.</p>
             
             <p>Pensate a jeans strappati, maglie grosse, strati ereditati e quel bagliore dell'ora d'oro che rendeva ogni outfit iconico senza sforzo.</p>
