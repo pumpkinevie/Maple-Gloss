@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autumn Style Guide | Maple Gloss</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #1a1523; 
+            --card-bg: #2d1b36;  
+            --text-color: #fdfbee;
+            --accent-color: #d35400;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: radial-gradient(circle at top right, #4a3434, #1a1a2e 70%);
+            color: var(--text-color);
+            font-family: 'Lora', serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding-bottom: 80px;
+        }
+
+        header { text-align: center; padding: 60px 20px; }
+        header h1 { font-family: 'Playfair Display', serif; font-size: 3rem; font-style: italic; margin: 0; }
+        .back-link { color: var(--accent-color); text-decoration: none; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px; display: inline-block; }
+
+        .fashion-container {
+            width: 90%;
+            max-width: 900px;
+            background-color: var(--card-bg);
+            padding: 40px;
+            border-radius: 25px;
+            border: 1px solid rgba(211, 84, 0, 0.2);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 2.2rem;
+            border-bottom: 1px solid rgba(211, 84, 0, 0.3);
+            margin: 50px 0 30px;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+
+        .fashion-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-auto-rows: 150px;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .grid-item {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 1px solid rgba(211, 84, 0, 0.3);
+            transition: 0.4s ease;
+        }
+
+        .grid-item:hover { transform: scale(1.03); border-color: var(--accent-color); }
+
+        .large { grid-column: span 3; grid-row: span 3; }
+        .tall { grid-column: span 2; grid-row: span 3; }
+        .wide { grid-column: span 3; grid-row: span 2; }
+        .small { grid-column: span 2; grid-row: span 2; }
+
+        .style-content {
+            line-height: 1.8;
+            font-size: 1.05rem;
+            opacity: 0.9;
+        }
+
+        .tuscan-highlight {
+            background: rgba(211, 84, 0, 0.05);
+            padding: 30px;
+            border-radius: 20px;
+            border-left: 4px solid #8e44ad;
+            margin: 30px 0;
+        }
+
+        .mood-text {
+            font-style: italic;
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="back-link">← Return to Home</a>
+        <h1>Autumn Archives</h1>
+        <p class="mood-text">A curated look into the aesthetics of nostalgia: from the tech-optimism of Y2K to the rustic elegance of Tuscany.</p>
+    </header>
+
+    <div class="fashion-container">
+        
+        <div class="section-title">The Y2K Lookbook</div>
+        
+        <div class="fashion-grid">
+            <img src="https://i.pinimg.com/1200x/94/ae/dd/94aedd63b98d5ffe5775194d03a4f499.jpg" class="grid-item large" alt="Y2K Aesthetic 1">
+            <img src="https://i.pinimg.com/736x/68/cd/5c/68cd5cfa48b1cc38ff257904e6585f41.jpg" class="grid-item tall" alt="Y2K Aesthetic 2">
+            <img src="https://i.pinimg.com/736x/bb/12/0d/bb120d5433e2cc0451d5e89969fab507.jpg" class="grid-item wide" alt="Y2K Aesthetic 3">
+            <img src="https://i.pinimg.com/736x/52/b2/09/52b2093ada649fefbc630eaf1892f566.jpg" class="grid-item small" alt="Y2K Aesthetic 4">
+            <img src="https://i.pinimg.com/1200x/41/54/ab/4154abfa40c921aa55d2a2409a4d4cd3.jpg" class="grid-item wide" alt="Y2K Aesthetic 5">
+            <img src="https://i.pinimg.com/736x/33/87/3f/33873f0cb27eb3c0ec3e461d6fca4743.jpg" class="grid-item tall" alt="Y2K Aesthetic 6">
+            <img src="https://i.pinimg.com/736x/7e/ff/ff/7efffff3e028c84ea4cc5344434cb423.jpg" class="grid-item small" alt="Y2K Aesthetic 7">
+            <img src="https://i.pinimg.com/736x/cb/a3/af/cba3afdaadf267c7d76bb6fadf95d408.jpg" class="grid-item small" alt="Y2K Aesthetic 8">
+            <img src="https://i.pinimg.com/736x/a9/1d/28/a91d2863582c4f97f2b39856950cc38e.jpg" class="grid-item small" alt="Y2K Aesthetic 9">
+        </div>
+
+        <div class="style-content">
+            <div class="section-title">The Tuscan Soul</div>
+            
+            <p>
+                Tuscan fashion is an ode to the "slow life," where every garment feels like it has a story to tell. It’s a style defined by organic textures—think heavy linen trousers, buttery soft leather loafers, and oversized cashmere knits that feel like a warm hug on a foggy morning. The palette is borrowed directly from the landscape: the muted silver of olive leaves, the deep terracotta of ancient rooftops, and the golden amber of honey.
+            </p>
+
+            <div class="tuscan-highlight">
+                <p style="margin: 0;">
+                    It’s not about following trends; it’s about an effortless, rustic sophistication that feels as natural as the rolling hills of Chianti. It is the <strong>"Bella Figura"</strong> applied to autumn—looking curated without ever looking like you tried too hard.
+                </p>
+            </div>
+
+            <p style="margin-top: 25px;">
+                What makes this aesthetic so captivating this autumn is how it grounds our Y2K obsession. While the early 2000s give us playfulness and edge, the Tuscan influence adds a layer of timeless romance. It’s the art of wearing a delicate vintage silk scarf with a thrifted denim jacket. It represents a girl who is just as comfortable navigating a bustling city with her digital camera as she is spending a quiet afternoon in an old herbarium, surrounded by the scent of dried lavender and aged paper.
+            </p>
+        </div>
+
+    </div>
+
+</body>
+</html>
