@@ -43,13 +43,8 @@
         .cozy-img {
             width: 100%; height: 500px; object-fit: cover;
             border-radius: 5px;
-            filter: sepia(0.2) contrast(1.1) brightness(0.9);
+            filter: sepia(0.1) contrast(1.1) brightness(0.9);
             box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-        }
-
-        .gallery-grid {
-            display: grid; grid-template-columns: 1fr 1fr;
-            gap: 20px; margin-bottom: 60px;
         }
 
         .style-content {
@@ -60,11 +55,23 @@
         .style-text h3 { color: var(--accent-color); font-size: 1.8rem; margin-top: 0; }
         .style-text p { line-height: 1.8; opacity: 0.8; }
 
-        .essentials {
-            background: rgba(211, 84, 0, 0.05);
-            padding: 20px; border-radius: 10px; margin-top: 20px;
+        .shop-suggestions {
+            background: rgba(211, 84, 0, 0.08);
+            padding: 25px; border-radius: 12px; margin-top: 25px;
+            border: 1px dashed var(--accent-color);
         }
-        .essentials b { color: var(--accent-color); display: block; margin-bottom: 10px; text-transform: uppercase; font-size: 0.8rem; }
+        .shop-suggestions h4 { 
+            margin: 0 0 15px 0; font-family: 'Playfair Display', serif; 
+            text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;
+        }
+        .outfit-list { list-style: none; padding: 0; font-size: 0.9rem; opacity: 0.9; line-height: 1.6; }
+        .outfit-list li { margin-bottom: 8px; padding-left: 15px; position: relative; }
+        .outfit-list li::before { content: '→'; position: absolute; left: 0; color: var(--accent-color); }
+
+        .gallery-grid {
+            display: grid; grid-template-columns: 1fr 1fr;
+            gap: 20px; margin-bottom: 60px;
+        }
 
         footer { padding: 60px; text-align: center; opacity: 0.3; font-size: 0.8rem; }
 
@@ -85,13 +92,19 @@
         <div class="style-content">
             <div class="style-text">
                 <h3>Rory's Core</h3>
-                <p>Built on comfort and literature. Rory embodies the "cozy intellectual" vibe with her legendary cable-knit sweaters and plaid skirts.</p>
-                <div class="essentials">
-                    <b>Core Items:</b>
-                    Oversized sweaters, Plaid mini skirts, Oxford shirts, Headbands, Leather satchels.
+                <p>Embodying the "cozy intellectual" vibe, Rory's style is perfect for crisp autumn mornings in the library. It's all about textures, classic patterns, and comfort.</p>
+                
+                <div class="shop-suggestions">
+                    <h4>Shop the Rory Look:</h4>
+                    <ul class="outfit-list">
+                        <li><b>The Knit:</b> Look for an oversized cream cable-knit sweater (Aran style).</li>
+                        <li><b>The Bottoms:</b> Plaid mini skirts in navy, forest green, or burgundy.</li>
+                        <li><b>Shoes:</b> Classic Mary Janes or simple white Converse.</li>
+                        <li><b>Accessory:</b> A thin fabric headband and a canvas tote bag for books.</li>
+                    </ul>
                 </div>
             </div>
-            <img src="https://i.pinimg.com/736x/ce/f5/33/cef5334752b4bd6d81dfd64e3973a473.jpg" class="cozy-img" alt="Rory">
+            <img src="https://i.pinimg.com/736x/ce/f5/33/cef5334752b4bd6d81dfd64e3973a473.jpg" class="cozy-img" alt="Rory Sweater">
         </div>
         <div class="gallery-grid">
             <img src="https://i.pinimg.com/736x/c9/8e/1a/c98e1a47a58e68457b02662a7c6c5b9a.jpg" class="cozy-img">
@@ -102,13 +115,19 @@
         <div class="style-content" style="direction: rtl;">
             <div class="style-text" style="direction: ltr;">
                 <h3>Lorelai's Vibe</h3>
-                <p>A mix of early 2000s trends and timeless feminine pieces. Bold coats and leather boots define her witty and sharp wardrobe.</p>
-                <div class="essentials">
-                    <b>Core Items:</b>
-                    Leather coats, Knee-high boots, Wrap dresses, Skinny scarves, Coffee in hand.
+                <p>A witty mix of early 2000s energy and timeless feminine silhouettes. Lorelai proves that professional can still be fun and colorful.</p>
+                
+                <div class="shop-suggestions">
+                    <h4>Shop the Lorelai Look:</h4>
+                    <ul class="outfit-list">
+                        <li><b>Outerwear:</b> Tailored leather jackets or long wool coats in bright colors.</li>
+                        <li><b>Dresses:</b> Silky wrap dresses with vintage-inspired floral prints.</li>
+                        <li><b>Boots:</b> Pointed-toe knee-high boots in black or chocolate brown.</li>
+                        <li><b>Detail:</b> A skinny knit scarf draped effortlessly over a fitted tee.</li>
+                    </ul>
                 </div>
             </div>
-            <img src="https://i.pinimg.com/1200x/2c/17/a5/2c17a5618cdf8ee12c12b3d34afbdd5b.jpg" class="cozy-img" alt="Lorelai">
+            <img src="https://i.pinimg.com/1200x/2c/17/a5/2c17a5618cdf8ee12c12b3d34afbdd5b.jpg" class="cozy-img" alt="Lorelai Style">
         </div>
         <div class="gallery-grid">
             <img src="https://i.pinimg.com/736x/2d/6d/5b/2d6d5b571b9595fc94e7f8cef4caa05b.jpg" class="cozy-img">
@@ -124,7 +143,7 @@
     </div>
 
     <footer>
-        Maple Gloss — Where it's always Autumn in Stars Hollow.
+        Maple Gloss — Inspired by Stars Hollow. Coffee, please.
     </footer>
 
 </body>
