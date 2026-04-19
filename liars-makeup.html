@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rosewood Beauty Guide | Maple Gloss</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #1a0f0f; /* Un marrone/nero molto profondo */
+            --card-bg: #2d1616;  
+            --text-color: #fdfbee;
+            --accent-color: #8b0000; /* Rosso sangue scuro */
+        }
+
+        body {
+            margin: 0; padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Lora', serif;
+            display: flex; flex-direction: column; align-items: center;
+        }
+
+        /* --- COVER SECTION --- */
+        .cover {
+            width: 100%;
+            height: 80vh;
+            background: linear-gradient(to bottom, rgba(26,15,15,0.2), rgba(26,15,15,1)), 
+                        url('https://i.pinimg.com/736x/32/3f/44/323f444ca0427576401c2d24d18425ce.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex; flex-direction: column;
+            justify-content: center; align-items: center;
+            text-align: center;
+        }
+
+        .cover h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem; font-style: italic;
+            margin: 0; text-shadow: 0 0 20px rgba(0,0,0,0.8);
+        }
+
+        .back-link { 
+            text-decoration: none; color: var(--text-color); 
+            font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase;
+            opacity: 0.7; margin-bottom: 20px;
+        }
+
+        /* --- CONTENT CONTAINER --- */
+        .container { width: 90%; max-width: 1000px; padding: 50px 0; }
+
+        .intro { text-align: center; font-style: italic; margin-bottom: 80px; font-size: 1.2rem; opacity: 0.9; }
+
+        /* --- LIAR SECTION --- */
+        .liar-row {
+            display: grid; grid-template-columns: 1fr 1fr;
+            gap: 50px; margin-bottom: 100px; align-items: center;
+        }
+
+        .liar-row:nth-child(even) { direction: rtl; }
+        .liar-row:nth-child(even) .liar-text { direction: ltr; }
+
+        .liar-img {
+            width: 100%; border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            /* Un filtro leggero per uniformare ma lasciare i colori del makeup */
+            filter: contrast(1.1) brightness(0.9);
+        }
+
+        .liar-text h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem; margin-top: 0; color: var(--accent-color);
+        }
+
+        .liar-text p { line-height: 1.8; opacity: 0.8; }
+
+        .makeup-keys {
+            list-style: none; padding: 0; margin-top: 20px;
+        }
+
+        .makeup-keys li {
+            margin-bottom: 10px; padding-left: 20px;
+            position: relative; font-size: 0.9rem;
+        }
+
+        .makeup-keys li::before {
+            content: '✦'; position: absolute; left: 0; color: var(--accent-color);
+        }
+
+        footer { padding: 50px; text-align: center; opacity: 0.4; font-size: 0.8rem; }
+
+        @media (max-width: 768px) {
+            .liar-row { grid-template-columns: 1fr; }
+            .cover h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="cover">
+        <a href="index.html" class="back-link">← Return to the Manor</a>
+        <h1>Rosewood Beauty</h1>
+        <p>Secrets, Lies, and the Perfect Eyeliner</p>
+    </section>
+
+    <div class="container">
+        <div class="intro">
+            "Never trust a pretty girl with an ugly secret." — In Rosewood, makeup isn't just about beauty; it's armor. Here is the definitive guide to the Liars' signature looks.
+        </div>
+
+        <div class="liar-row">
+            <img src="https://i.pinimg.com/736x/1c/dc/8a/1cdc8ac26ef8b353d5699a4fdfbd147f.jpg" class="liar-img" alt="Alison DiLaurentis">
+            <div class="liar-text">
+                <h2>Alison DiLaurentis</h2>
+                <p>The Queen Bee. Alison's look is classic, intimidating, and perfectly polished. She relies on timeless femininity to mask her complicated nature.</p>
+                <ul class="makeup-keys">
+                    <li><b>Lips:</b> The signature pink or classic red gloss.</li>
+                    <li><b>Eyes:</b> Soft champagne shimmer with perfectly curled lashes.</li>
+                    <li><b>Face:</b> Peachy blush for that "innocent" porcelain glow.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="liar-row">
+            <img src="https://i.pinimg.com/736x/ca/07/4d/ca074ddc4d2341c1f7e396cadf818b71.jpg" class="liar-img" alt="Aria Montgomery">
+            <div class="liar-text">
+                <h2>Aria Montgomery</h2>
+                <p>The Indie Soul. Aria's makeup is as eclectic as her earrings. She isn't afraid to go dark, bold, and experimental.</p>
+                <ul class="makeup-keys">
+                    <li><b>Brows:</b> Strong, bold, and perfectly defined.</li>
+                    <li><b>Eyes:</b> Heavy mascara and dark, smudgy kohl liner.</li>
+                    <li><b>Lips:</b> Deep berry, plum, or matte mauve tones.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="liar-row">
+            <img src="https://i.pinimg.com/736x/6d/a8/77/6da8775ad5980c7b7f8f21d4d54fe4eb.jpg" class="liar-img" alt="Hanna Marin">
+            <div class="liar-text">
+                <h2>Hanna Marin</h2>
+                <p>The It-Girl. Hanna's look is high-glam and trendy. She masters the art of the smokey eye and the sun-kissed California glow.</p>
+                <ul class="makeup-keys">
+                    <li><b>Eyes:</b> Bronzed smokey eye with a winged liner.</li>
+                    <li><b>Face:</b> Sharp contour and a high-shine highlighter.</li>
+                    <li><b>Lips:</b> Creamy nude or soft petal pink.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="liar-row">
+            <img src="https://i.pinimg.com/736x/bc/08/4b/bc084b4ace0254a3f9794330e0718b99.jpg" class="liar-img" alt="Spencer Hastings">
+            <div class="liar-text">
+                <h2>Spencer Hastings</h2>
+                <p>The Academic. Spencer's look is "Old Money" and understated. It’s about looking effortless and naturally superior.</p>
+                <ul class="makeup-keys">
+                    <li><b>Face:</b> "No-makeup" makeup. Fresh, breathable skin.</li>
+                    <li><b>Eyes:</b> Matte brown shadows to define the crease.</li>
+                    <li><b>Lips:</b> Just a touch of tinted lip balm or sheer rose.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="liar-row">
+            <img src="https://i.pinimg.com/736x/55/a3/d7/55a3d7d49cb00680d996e86f2a15cf22.jpg" class="liar-img" alt="Emily Fields">
+            <div class="liar-text">
+                <h2>Emily Fields</h2>
+                <p>The Natural. Emily's beauty is effortless and athletic. She focuses on a radiant, dewy finish that highlights her features.</p>
+                <ul class="makeup-keys">
+                    <li><b>Face:</b> Dewy finish with a sun-kissed bronzer.</li>
+                    <li><b>Eyes:</b> Earthy tones and waterproof mascara.</li>
+                    <li><b>Glow:</b> Emphasis on the cheekbones and bridge of the nose.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="liar-row">
+            <img src="https://i.pinimg.com/736x/6c/9c/00/6c9c00bd3a5d7910b808e14d249771fb.jpg" class="liar-img" alt="Mona Vanderwaal">
+            <div class="liar-text">
+                <h2>Mona Vanderwaal</h2>
+                <p>The Chameleon. Mona's makeup is precise, calculated, and always sharp. She knows how to use beauty as a weapon.</p>
+                <ul class="makeup-keys">
+                    <li><b>Eyes:</b> Sharp-as-a-knife cat eyeliner.</li>
+                    <li><b>Face:</b> Perfectly matte skin with zero imperfections.</li>
+                    <li><b>Lips:</b> Bold fuchsia or a very calculated nude.</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        Maple Gloss — 2026. "A" is watching.
+    </footer>
+
+</body>
+</html>
