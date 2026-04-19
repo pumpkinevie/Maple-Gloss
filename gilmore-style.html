@@ -73,6 +73,16 @@
             gap: 20px; margin-bottom: 60px;
         }
 
+        /* Nuova classe per la griglia finale con una sola immagine */
+        .single-img-grid {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 60px;
+        }
+        .single-img-grid img {
+            width: 100%; max-width: 500px;
+        }
+
         footer { padding: 60px; text-align: center; opacity: 0.3; font-size: 0.8rem; }
 
         @media (max-width: 768px) { .style-content, .gallery-grid { grid-template-columns: 1fr; } }
@@ -137,8 +147,7 @@
         </div>
 
         <h2 class="section-title">The Gilmore Bond</h2>
-        <div class="gallery-grid">
-            <img src="https://i.pinimg.com/1200x/fc/a7/61/fca761c77b7b1fcabd23023186a5bd58.jpg" class="cozy-img" alt="Gilmore Girls Together">
+        <div class="single-img-grid">
             <img src="https://i.pinimg.com/1200x/a6/48/23/a64823c5c0d1bd52f521ce9de02e14f2.jpg" class="cozy-img" alt="Gilmore Girls Smiling">
         </div>
 
