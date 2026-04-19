@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Secret Herbarium | Maple Gloss</title>
+    <title>The Ritual Elements | Maple Gloss</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -14,125 +14,89 @@
         }
 
         body {
-            margin: 0;
-            padding: 0;
+            margin: 0; padding: 0;
             background: radial-gradient(circle at top right, #352235, #1a1523 80%);
             color: var(--text-color);
             font-family: 'Lora', serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-            padding-bottom: 80px;
+            display: flex; flex-direction: column; align-items: center;
+            min-height: 100vh; padding-bottom: 100px;
         }
 
         header { text-align: center; padding: 60px 20px; }
-        header h1 { font-family: 'Playfair Display', serif; font-size: 3rem; font-style: italic; margin: 0; }
+        header h1 { font-family: 'Playfair Display', serif; font-size: 2.8rem; font-style: italic; margin: 0; }
         .back-link { color: var(--accent-color); text-decoration: none; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px; display: inline-block; opacity: 0.7; }
 
-        .herbarium-container {
-            width: 90%;
-            max-width: 900px;
+        .diary-container {
+            width: 90%; max-width: 800px;
             background-color: var(--card-bg);
-            padding: 50px;
-            border-radius: 30px;
+            padding: 40px; border-radius: 30px;
             border: 1px solid rgba(211, 84, 0, 0.15);
             box-shadow: 0 20px 60px rgba(0,0,0,0.6);
         }
 
-        .intro-text {
-            text-align: center;
-            line-height: 1.8;
-            font-size: 1.1rem;
-            margin-bottom: 50px;
-            font-style: italic;
-            opacity: 0.9;
+        .photo-entry { margin-bottom: 60px; text-align: center; }
+
+        /* IL FILTRO WITCHY */
+        .photo-entry img {
+            max-width: 100%; height: auto;
+            border-radius: 12px; border: 1px solid rgba(211, 84, 0, 0.3);
+            filter: sepia(0.4) contrast(1.1) brightness(0.85) saturate(0.8);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
         }
-
-        /* Griglia Collage con Filtro Witchy */
-        .herbarium-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-auto-rows: 200px;
-            gap: 20px;
-        }
-
-        .grid-item { position: relative; overflow: hidden; border-radius: 15px; }
-
-        .grid-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            filter: sepia(0.4) contrast(1.2) brightness(0.85); /* Il filtro witchy */
-            transition: 0.6s ease;
-        }
-
-        .grid-item:hover img {
-            filter: sepia(0.1) contrast(1.3) brightness(1);
-            transform: scale(1.05);
-        }
-
-        /* Classi per il collage */
-        .large { grid-column: span 2; grid-row: span 2; }
-        .tall { grid-column: span 1; grid-row: span 2; }
-        .wide { grid-column: span 2; grid-row: span 1; }
 
         .caption {
-            font-size: 0.8rem;
-            text-align: center;
-            margin-top: 10px;
-            opacity: 0.6;
-            font-style: italic;
+            font-size: 0.95rem; margin-top: 20px;
+            line-height: 1.7; opacity: 0.8; font-style: italic;
         }
 
-        footer { margin-top: 50px; text-align: center; font-size: 0.9rem; opacity: 0.5; }
+        .ritual-trio {
+            display: grid; grid-template-columns: 1fr 1fr 1fr;
+            gap: 15px; margin: 30px 0;
+        }
+
+        .trio-item { font-size: 0.8rem; text-align: center; border-top: 1px solid rgba(211, 84, 0, 0.2); padding-top: 10px; }
+        .trio-item b { color: var(--accent-color); display: block; margin-bottom: 5px; }
+
+        footer { margin-top: 50px; text-align: center; opacity: 0.4; font-size: 0.8rem; }
     </style>
 </head>
 <body>
 
     <header>
         <a href="index.html" class="back-link">← Return to the Manor</a>
-        <h1>The Secret Herbarium</h1>
+        <h1>Spells & Scents</h1>
     </header>
 
-    <div class="herbarium-container">
-        <div class="intro-text">
-            "I've always believed that plants hold the memories of the earth. Today, I stepped into a small, hidden apothecary where the air was thick with the scent of dried roots and old magic. These are the treasures I brought back—whispers of autumn to keep the spirit warm."
+    <div class="diary-container">
+        
+        <div class="photo-entry">
+            <img src="https://i.imgur.com/W8HFBpz.jpeg" alt="Sandalwood, Dragon Blood and Rose Incense">
+            <div class="caption">
+                The heart of my haul: three distinct spirits to fill the air. 
+            </div>
+            <div class="ritual-trio">
+                <div class="trio-item"><b>Sandalwood</b> Grounding & sacred meditation.</div>
+                <div class="trio-item"><b>Dragon Blood</b> For protection & ritual strength.</div>
+                <div class="trio-item"><b>Pure Rose</b> Love, harmony & 100% natural soul.</div>
+            </div>
         </div>
 
-        <div class="herbarium-grid">
-            <div class="grid-item large">
-                <img src="https://i.imgur.com/lIShqtt.jpeg" alt="Apothecary">
-                <p class="caption">The threshold of ancient secrets.</p>
-            </div>
-            <div class="grid-item tall">
-                <img src="https://i.imgur.com/FB76E37.jpeg" alt="Bottles">
-                <p class="caption">Amber remedies.</p>
-            </div>
-            <div class="grid-item wide">
-                <img src="https://i.imgur.com/W8HFBpz.jpeg" alt="Bags">
-                <p class="caption">Dried botanicals.</p>
-            </div>
-            <div class="grid-item tall">
-                <img src="https://i.imgur.com/wsDuPHb.jpeg" alt="Jars">
-                <p class="caption">Labeled whispers.</p>
-            </div>
-            <div class="grid-item wide">
-                <img src="https://i.imgur.com/ZzeqfNC.jpeg" alt="Hanging">
-                <p class="caption">Harvest moon rituals.</p>
-            </div>
-            <div class="grid-item large">
-                <img src="https://i.imgur.com/yx97woL.jpeg" alt="Shelf">
-                <p class="caption">The alchemist's corner.</p>
-            </div>
-            <div class="grid-item tall">
-                <img src="https://i.imgur.com/8Ai42wo.jpeg" alt="Detail">
-                <p class="caption">Captured time.</p>
-            </div>
+        <div class="photo-entry">
+            <img src="https://i.imgur.com/8Ai42wo.jpeg" alt="Energy Smudging Kit">
+            <p class="caption">
+                The <b>"6 Elementi"</b> box for deeper work. It’s a journey of energy—burning resins and woods to let my thoughts dissolve into the starlit sky.
+            </p>
+        </div>
+
+        <div class="photo-entry">
+            <img src="https://i.imgur.com/wsDuPHb.jpeg" alt="Selenite Wand">
+            <p class="caption">
+                And finally, the <b>Selenite wand</b>. The "liquid light" to cleanse the space before a single spark is lit.
+            </p>
         </div>
 
         <footer>
-            Maple Gloss © 2026 — Apothecary Series No. 1
+            Maple Gloss © 2026 — Apothecary Finds: Smudge & Spirit
         </footer>
     </div>
 
