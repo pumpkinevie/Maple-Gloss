@@ -196,11 +196,6 @@
 
         <img src="https://i.pinimg.com/1200x/37/3a/e7/373ae722ff6ee3ad18971d43339f002a.jpg" class="cat-apples-img" alt="Autumn cat">
 
-        <div class="suggestion-box">
-            <h4>Leave a whisper...</h4>
-            <a href="mailto:tua-email@esempio.com" class="suggestion-link">✨ Suggest a new topic for the blog</a>
-        </div>
-
         <div class="mood-footer">
             <img src="https://i.pinimg.com/736x/5e/f2/5f/5ef25fbb9b186af489312e3ed0959054.jpg" alt="Hot cocoa">
             <div>Current mood: Hot chocolate with extra cream and nostalgic film cameras. ☕🎞️</div>
@@ -246,6 +241,65 @@
     </div>
 </a>
     </div>
+<div class="suggestion-box" onclick="openModal()" style="cursor: pointer; border: 1px dashed #d35400; border-radius: 20px; padding: 40px; text-align: center; background: rgba(211, 84, 0, 0.05); margin: 40px 0;">
+    <h2 style="font-family: 'Playfair Display', serif; font-style: italic; color: #fdfbee; margin-bottom: 10px;">Leave a whisper...</h2>
+    <p style="color: #d35400; margin: 0;">✦ Suggest a new topic for the blog</p>
+</div>
 
+<div id="suggestionModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <h3 style="font-family: 'Playfair Display', serif; font-style: italic;">A new secret?</h3>
+        <p style="font-size: 0.9rem; opacity: 0.7;">Tell me what you'd like to see next on Maple Gloss.</p>
+        
+        <form action="https://formspree.io/f/tuo_id_qui" method="POST">
+            <textarea name="suggestion" placeholder="Your idea..." required></textarea>
+            <button type="submit">Send whisper</button>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Stili per il Modal */
+    .modal {
+        display: none; 
+        position: fixed; z-index: 1000; left: 0; top: 0;
+        width: 100%; height: 100%;
+        background-color: rgba(0,0,0,0.9);
+        backdrop-filter: blur(5px);
+    }
+    .modal-content {
+        background-color: #2d1616;
+        margin: 15% auto; padding: 30px;
+        border: 1px solid #d35400; width: 90%; max-width: 400px;
+        border-radius: 15px; position: relative; text-align: center;
+    }
+    .close-btn {
+        position: absolute; right: 20px; top: 10px;
+        color: #fdfbee; font-size: 28px; cursor: pointer;
+    }
+    textarea {
+        width: 100%; height: 100px; background: #1a0f0f;
+        border: 1px solid rgba(211, 84, 0, 0.3); color: #fdfbee;
+        padding: 10px; border-radius: 8px; margin: 20px 0;
+        font-family: 'Lora', serif; resize: none; box-sizing: border-box;
+    }
+    .modal-content button {
+        background: #d35400; color: #fdfbee; border: none;
+        padding: 10px 30px; border-radius: 20px; cursor: pointer;
+        font-family: 'Playfair Display', serif; transition: 0.3s;
+    }
+    .modal-content button:hover { background: #b34700; transform: scale(1.05); }
+</style>
+
+<script>
+    function openModal() { document.getElementById("suggestionModal").style.display = "block"; }
+    function closeModal() { document.getElementById("suggestionModal").style.display = "none"; }
+    // Chiude se clicchi fuori dal pop-up
+    window.onclick = function(event) {
+        let modal = document.getElementById("suggestionModal");
+        if (event.target == modal) { modal.style.display = "none"; }
+    }
+</script>
 </body>
 </html>
